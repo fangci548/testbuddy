@@ -1,0 +1,8 @@
+7/19
+1. ion-segment 用在 case上的狀態列
+2. searchbar的背景在global.scss 設定
+3. ion-grid 分欄  (toolbar size=4 offset=3 ?)
+4. 文字的外框 -webkit-text-stroke (厚度 顏色)
+5. img <ion-img [src]=".."></ion-img>
+6. searchbar 教學 https://www.youtube.com/watch?v=UErRAFifRXk&t=886s
+7. debounce 延遲搜尋

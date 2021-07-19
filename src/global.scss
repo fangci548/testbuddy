@@ -24,3 +24,17 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: singleday;
+  src: url(../src/assets/font/SingleDay-Regular.ttf);
+}
+
+@font-face {
+  font-family: sirinstencil;
+  src: url(../src/assets/font/SirinStencil-Regular.ttf);
+}
+
+ion-toolbar {  //!toolbar 的背景色
+  --background: #95E1D3;
+}
