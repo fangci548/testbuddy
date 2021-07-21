@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'mycase',
     loadChildren: () => import('./mycase/mycase.module').then( m => m.MycasePageModule)
   },
+  {
+    path: 'setting',
+    loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
+  },
 
 
 
