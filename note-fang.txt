@@ -6,3 +6,4 @@
 5. img <ion-img [src]=".."></ion-img>
 6. searchbar 教學 https://www.youtube.com/watch?v=UErRAFifRXk&t=886s
 7. debounce 延遲搜尋
+
