@@ -12,3 +12,26 @@
 2. 不透明度 opacity: 0.9;(較明顯)  opacity: 0.4;(較不明顯)
 3. tabs的顏色 (icon的顏色) tabs.page.scss --color:red;
 4. page-tab的路徑 page.module.ts export class複製到 tab的tab.module.ts import中
+5. --border-style:none;  底線刪除
+
+
+
+!!!!*****還沒做到的*****!!!!
+search頁面:
+  搜尋建議(searchbar)
+  search 時間
+  案件須微調
+  案件詳細內容頁面
+
+case頁面: (tab2 3)
+  狀態列 連接 (需2-3個頁面)
+    mycase
+      1.未媒合 2.已媒合 3.已完成
+    other
+      1.收藏 2.執行中 3.已完成
+  聊天畫面
+  新增案件(mycase)  !! 搜尋頁面是否增加新增案件按鈕? !!
+
+setting頁面:
+  儲值轉讓按鈕微調 & (中間的線)
+  下方設定各個頁面連結及動畫
