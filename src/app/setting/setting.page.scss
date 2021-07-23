@@ -30,3 +30,24 @@ ion-title {
   font-family: sirinstencil;
   color: #606c70;
 }
+
+ion-card{
+  border-radius: 20px;
+}
+
+.cardbox{  //!儲值轉讓中間的線還沒加上//
+  --border-style:none;  //儲值 轉讓的底線 移除
+  text-align:center;   //文字置中
+  font-size: 20px;
+  color: #606c70;
+}
+
+.setting{
+  color: #606c70;
+  ion-label{
+    font-family: sirinstencil;
+  }
+  ion-icon{
+    padding-right: 10px;
+  }
+}
