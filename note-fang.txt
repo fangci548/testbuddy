@@ -7,5 +7,8 @@
 6. searchbar 教學 https://www.youtube.com/watch?v=UErRAFifRXk&t=886s
 7. debounce 延遲搜尋
 
-7/21
-1.
+7/23
+1. 修改背景顏色: 在global.scss ion-content{--ion-background-color:#111D12;}
+2. 不透明度 opacity: 0.9;(較明顯)  opacity: 0.4;(較不明顯)
+3. tabs的顏色 (icon的顏色) tabs.page.scss --color:red;
+4. page-tab的路徑 page.module.ts export class複製到 tab的tab.module.ts import中
