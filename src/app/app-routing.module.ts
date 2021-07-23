@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'setting',
     loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
   },
+  {
+    path: 'othercase',
+    loadChildren: () => import('./othercase/othercase.module').then( m => m.OthercasePageModule)
+  },
 
 
 
