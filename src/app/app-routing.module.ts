@@ -21,6 +21,10 @@ const routes: Routes = [
     path: 'othercase',
     loadChildren: () => import('./othercase/othercase.module').then( m => m.OthercasePageModule)
   },
+  {
+    path: 'mycase-heart',
+    loadChildren: () => import('./mycase-heart/mycase-heart.module').then( m => m.MycaseHeartPageModule)
+  },
 
 
 

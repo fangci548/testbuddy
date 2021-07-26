@@ -14,6 +14,27 @@
 4. page-tab的路徑 page.module.ts export class複製到 tab的tab.module.ts import中
 5. --border-style:none;  底線刪除
 
+7/25
+1. app-shell 瀏覽器下載完整版應用之前 先快速啟動一個靜態頁面
+   程式碼載入完畢再切換到完整版
+2. **.components.ts中
+      selector: 元件選擇器 (css 元素選擇器)  就是把元件當成一個選擇器 可以在外部直接使用( <selector>)
+      templateUrl: 元件範本檔案的位置
+      styleUrls: 元件私有css樣式表文件的位置
+3. ngOnInit() 是元件獲取初始資料的好地方
+4. pipe 是格式化的好辦法~ 可以建立自己的pipe 也有內建的 (全部變大寫)
+5. [(ngModel)] 是 Angular 的雙向資料繫結語法。  可以雙向流動 用在表格
+6. *ngFor="let *** of ###"  ###為在ts裡 使用的名稱(把資料包起來的陣列名)
+   ***為在html裡用的***.id~
+7. *nglf="函式名稱"  在函式還沒存在時 先隱藏內容
+8. 可以用class 連接 css樣式  [class.some-css-class(例子:selected)]="some-condition(例子:hero === selectedHero)"
+9. service 可讓所有類別使用它來獲取資料 在多個"互相不知道"的類別之間共享資訊  ng generate service hero
+10.  @Input() 裝飾器表示該屬性可以從其父元件中獲取值。
+11.
+12.
+13.
+
+
 
 
 !!!!*****還沒做到的*****!!!!
@@ -22,6 +43,7 @@ search頁面:
   search 時間
   案件須微調
   案件詳細內容頁面
+  搜尋功能
 
 case頁面: (tab2 3)
   狀態列 連接 (需2-3個頁面)
@@ -35,3 +57,6 @@ case頁面: (tab2 3)
 setting頁面:
   儲值轉讓按鈕微調 & (中間的線)
   下方設定各個頁面連結及動畫
+
+
+評價  區塊鏈裡面放評價 交易紀錄等等

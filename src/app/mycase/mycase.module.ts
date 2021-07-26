@@ -22,13 +22,13 @@ export class MycasePageModule {
 }
 
 
-@Component({
-  selector: 'segment-example',
-  templateUrl: 'segment-example.html',
-  styleUrls: ['./segment-example.css'],
-})
-export class SegmentExample {
-  segmentChanged(ev: any) {
-    console.log('Segment changed', ev);
-  }
-}
+// @Component({
+//   selector: 'segment-example',
+//   templateUrl: 'segment-example.html',
+//   styleUrls: ['./segment-example.css'],
+// })
+// export class SegmentExample {
+//   segmentChanged(ev: any) {
+//     console.log('Segment changed', ev);
+//   }
+// }
