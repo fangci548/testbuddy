@@ -1,3 +1,5 @@
+import { SearchPage } from './../search/search.page';
+import { HeadPage } from './../head/head.page';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,9 +13,13 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     IonicModule,
     CommonModule,
     FormsModule,
-    SearchPageModule,
+    // SearchPageModule,
     Tab1PageRoutingModule
   ],
-  declarations: [Tab1Page]
+  declarations: [
+    Tab1Page,
+    HeadPage,
+    SearchPage
+  ]
 })
 export class Tab1PageModule {}

@@ -1,17 +1,12 @@
-import { CasedetailPage } from './../casedetail/casedetail.page';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SearchPage } from './search.page';
+import { HeadPage } from './head.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: SearchPage
-  },
-  {
-    path: 'detail',
-    component: CasedetailPage
+    component: HeadPage
   }
 ];
 
@@ -19,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SearchPageRoutingModule {}
+export class HeadPageRoutingModule {}

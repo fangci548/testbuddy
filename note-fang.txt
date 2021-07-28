@@ -30,9 +30,17 @@
 8. 可以用class 連接 css樣式  [class.some-css-class(例子:selected)]="some-condition(例子:hero === selectedHero)"
 9. service 可讓所有類別使用它來獲取資料 在多個"互相不知道"的類別之間共享資訊  ng generate service hero
 10.  @Input() 裝飾器表示該屬性可以從其父元件中獲取值。
-11.
-12.
-13.
+
+
+7/28
+1. router 在tab介面直接加上<app-head> 標頭 再加上要輸出的頁面的selector 參考tab2
+   在tab2.module.ts中 import 會用到的頁面 declarations中加入
+2.
+3.
+4.
+5.
+6.
+7.
 
 
 

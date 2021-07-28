@@ -1,22 +1,23 @@
-import { CasedetailPage } from './../casedetail/casedetail.page';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SearchPage } from './search.page';
+import { MycasePage } from './mycase.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: SearchPage
+    component: MycasePage
   },
   {
-    path: 'detail',
-    component: CasedetailPage
+    path: 'mycase-done',
+    loadChildren: () => import('../mycase-done/mycase-done.module').then( m => m.MycaseDonePageModule)
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SearchPageRoutingModule {}
+export class MycasePageRoutingModule {}

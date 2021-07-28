@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MycaseHeartPage } from '../mycase-heart/mycase-heart.page';
+
 import { Tab1Page } from './tab1.page';
 
 const routes: Routes = [

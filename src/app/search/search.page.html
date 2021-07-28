@@ -1,35 +1,18 @@
 <!DOCTYPE html>
-<ion-header>
-  <ion-toolbar>
-      <ion-row>
-        <ion-col>
-          <ion-title>BUDDY!</ion-title>
-        </ion-col>
-        <ion-col > <!-- size="4" offset="2" -->
-          <ion-badge class="coinbar" style="float: right; padding-right: 10px;">
-            <img src="../assets/img/B_adobespark.png" style="float: left; width: 25px; height: 25px;">
-            350
-          </ion-badge>
-        </ion-col>
-      </ion-row>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-searchbar #search (ionChange)="_ionchange($event)" debounce="500"></ion-searchbar>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of searcheditem">
-      <ion-avatar style="width: 50px; height: 50px; margin-right: 15px;"><img src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png"></ion-avatar>
-      <ion-label>
-        <p>{{item.name}}
-          <ion-icon style="float: right;" name="heart-outline"></ion-icon>
-        </p>
-        <ion-badge>{{item.hashtag}}</ion-badge>
-        <p>{{item.content}}</p>
-      </ion-label>
-
-    </ion-item>
+    <!-- <a [routerlink]="[/detail]"> -->
+      <ion-item *ngFor="let item of searcheditem">
+        <ion-avatar style="width: 50px; height: 50px; margin-right: 15px;"><img src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png"></ion-avatar>
+        <ion-label>
+          <p>{{item.name}}
+            <ion-icon style="float: right;" name="heart-outline"></ion-icon>
+          </p>
+          <ion-badge>{{item.hashtag}}</ion-badge>
+          <p>{{item.content}}</p>
+        </ion-label>
+      </ion-item>
+    <!-- </a> -->
   </ion-list>
 </ion-content>

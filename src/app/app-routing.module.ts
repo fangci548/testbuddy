@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -9,9 +9,10 @@ const routes: Routes = [
   {
     path: 'search',
     loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
-  },  {
+  },
+  {
     path: 'mycase',
-    loadChildren: () => import('./mycase/mycase.module').then( m => m.MycasePageModule)
+    loadChildren: () => import('./my/mycase/mycase.module').then( m => m.MycasePageModule)
   },
   {
     path: 'setting',
@@ -19,12 +20,35 @@ const routes: Routes = [
   },
   {
     path: 'othercase',
-    loadChildren: () => import('./othercase/othercase.module').then( m => m.OthercasePageModule)
+    loadChildren: () => import('./other/othercase/othercase.module').then( m => m.OthercasePageModule),
   },
   {
-    path: 'mycase-heart',
-    loadChildren: () => import('./mycase-heart/mycase-heart.module').then( m => m.MycaseHeartPageModule)
+    path: 'othercase-done',
+    loadChildren: () => import('./other/othercase-done/othercase-done.module').then( m => m.OthercaseDonePageModule)
   },
+  {
+    path: 'othercase-collect',
+    loadChildren: () => import('./other/othercase-collect/othercase-collect.module').then(m => m.OthercaseCollectPageModule)
+  },
+  {
+    path: 'othercase-running',
+    loadChildren: () => import('./other/othercase-running/othercase-running.module').then( m => m.OthercaseRunningPageModule)
+  },
+  {
+    path: 'mycase-paired',
+    loadChildren: () => import('./my/mycase-paired/mycase-paired.module').then( m => m.MycasePairedPageModule)
+  },
+  {
+    path: 'mycase-unpaired',
+    loadChildren: () => import('./my/mycase-unpaired/mycase-unpaired.module').then( m => m.MycaseUnpairedPageModule)
+  },  {
+    path: 'casedetail',
+    loadChildren: () => import('./casedetail/casedetail.module').then( m => m.CasedetailPageModule)
+  },
+
+
+
+
 
 
 

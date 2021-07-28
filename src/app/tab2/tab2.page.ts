@@ -1,4 +1,6 @@
+import { collectExternalReferences } from '@angular/compiler';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
+  mode = 'collect';
   constructor() {}
 
 }

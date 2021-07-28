@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<ion-content>
+  <!-- Default Segment(ionChange)="segmentChanged($event)"  routerLink="heart"-->
+
+
+  <ion-segment [(ngModel)]="mode">
+    <!-- Default Segment -->
+    <ion-segment-button style="border-right: solid #CCCCBF" value="un-paired">
+      <ion-label>未媒合</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="paired">
+      <ion-label>已媒合</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="done" style="border-left: solid #CCCCBF">
+      <ion-label>已完成</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+<!-- List of Text Items -->
+
+  <app-mycase-done *ngIf="mode == 'done'"></app-mycase-done>
+  <app-mycase-unpaired *ngIf="mode == 'un-paired'"></app-mycase-unpaired>
+  <app-mycase-paired *ngIf="mode == 'paired'"></app-mycase-paired>
+
+</ion-content>
