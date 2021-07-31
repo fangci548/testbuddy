@@ -1,3 +1,5 @@
+import { OthercaseRunningPage } from './../othercase-running/othercase-running.page';
+import { OthercaseDonePage } from './../othercase-done/othercase-done.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +18,11 @@ import { OthercaseCollectPage } from '../othercase-collect/othercase-collect.pag
     IonicModule,
     OthercasePageRoutingModule
   ],
-  declarations: [OthercasePage, OthercaseCollectPage]
+  declarations: [
+    OthercasePage,
+    OthercaseCollectPage,
+    OthercaseDonePage,
+    OthercaseRunningPage
+  ]
 })
 export class OthercasePageModule {}

@@ -1,5 +1,5 @@
 import { NgModule, Component } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, Router, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -41,7 +41,8 @@ const routes: Routes = [
   {
     path: 'mycase-unpaired',
     loadChildren: () => import('./my/mycase-unpaired/mycase-unpaired.module').then( m => m.MycaseUnpairedPageModule)
-  },  {
+  },
+  {
     path: 'casedetail',
     loadChildren: () => import('./casedetail/casedetail.module').then( m => m.CasedetailPageModule)
   },

@@ -24,10 +24,12 @@ ion-segment{
   border: solid #CCCCBF;
   border-radius: 20px;
   margin-top: 5px;
+  height: 30px;
 }
 
 ion-segment-button {
   --background-checked: #ECE4DB;
   --color-checked: none;
   font-size: 15px;
+  min-height: 30px;
 }

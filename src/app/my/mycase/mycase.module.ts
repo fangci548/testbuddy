@@ -1,3 +1,6 @@
+import { MycaseUnpairedPage } from './../mycase-unpaired/mycase-unpaired.page';
+import { MycasePairedPage } from './../mycase-paired/mycase-paired.page';
+import { MycaseDonePage } from './../mycase-done/mycase-done.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +17,12 @@ import { MycasePage } from './mycase.page';
     IonicModule,
     MycasePageRoutingModule
   ],
-  declarations: [MycasePage]
+  declarations: [
+    MycasePage,
+    MycaseDonePage,
+    MycasePairedPage,
+    MycaseUnpairedPage
+  ]
 })
 export class MycasePageModule {
 
