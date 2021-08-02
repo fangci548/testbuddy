@@ -1,3 +1,4 @@
+import { CasedetailPageModule } from './../casedetail/casedetail.module';
 import { CasedetailPage } from './../casedetail/casedetail.page';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,8 +11,11 @@ const routes: Routes = [
     component: SearchPage
   },
   {
-    path: 'detail',
-    component: CasedetailPage
+    path: 'detail/:id',
+    loadChildren: () =>
+      import('./search-detail/search-detail.module').then(
+        m => m.SearchDetailPageModule)
+
   }
 ];
 

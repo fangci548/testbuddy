@@ -1,0 +1,47 @@
+.coinbar {
+  background-color: #76C893;
+  width: 70px;
+  height: 25px;
+  border-radius: 10px;
+  font-family: sirinstencil;
+  font-size: 20px;
+  left: auto;
+  // float: left;
+}
+.ion-padding {
+  --padding-start: var(--ion-padding, 5px);
+  --padding-end: var(--ion-padding, 5px);
+  --padding-top: var(--ion-padding, 5px);
+  --padding-bottom: var(--ion-padding, 16px);
+}
+
+ion-card{
+  height: 80%;
+  width: 100%;
+  margin: 0px;
+  border-radius: 10px;
+  border: solid #CCCCBF;
+  ion-label {
+    margin-left: 10px;
+    margin-top: 0px;
+    font-size: 25px;
+    font-family: singleday;
+  }
+}
+
+.hashtag{
+  margin-left: 20%;
+  color: #606c70;
+  background-color: #CDDAFD;
+  height: 25px;
+  border-radius: 10px;
+}
+
+ion-card-content{
+  margin-left: 10%;
+  p{
+    font-size: 20px;
+    color: #606c70;
+  }
+}
+

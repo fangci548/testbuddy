@@ -1,3 +1,5 @@
+import { SettingPage } from './../setting/setting.page';
+import { HeadPage } from './../head/head.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -11,9 +13,13 @@ import { SettingPageModule } from '../setting/setting.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    SettingPageModule,
+    // SettingPageModule,
     Tab4PageRoutingModule
   ],
-  declarations: [Tab4Page]
+  declarations: [
+    Tab4Page,
+    HeadPage,
+    SettingPage
+  ]
 })
 export class Tab4PageModule {}
