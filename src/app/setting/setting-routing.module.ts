@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: SettingPage
+  },
+  {
+    path: 'coin-manage',
+    loadChildren: () => import('./coin-manage/coin-manage.module').then( m => m.CoinManagePageModule)
   }
 ];
 

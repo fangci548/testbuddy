@@ -17,7 +17,7 @@
 
     <ion-row >
       <ion-col style="border-right: solid #CCCCBF 1px;">
-        <ion-item href="#" class="cardbox">
+        <ion-item class="cardbox">
           <ion-icon name="enter-outline"></ion-icon>
           <ion-label>儲值</ion-label>
         </ion-item>
@@ -32,7 +32,7 @@
   </ion-card>
 
   <ion-card >
-    <ion-item class="setting">
+    <ion-item class="setting" [routerLink]="['../../setting/coin-manage']" routerLinkActive="router-link-active">
       <ion-icon name="server-outline"></ion-icon>
       <ion-label>BUBBY COIN管理</ion-label>
     </ion-item>
@@ -52,7 +52,7 @@
       <ion-label>帳號綁定/設定</ion-label>
     </ion-item>
 
-    <ion-item href="#" class="setting">
+    <ion-item [routerLink]="['/signin']" routerLinkActive="router-link-active"  class="setting">
       <ion-icon name="exit-outline"></ion-icon>
       <ion-label>登出</ion-label>
     </ion-item>

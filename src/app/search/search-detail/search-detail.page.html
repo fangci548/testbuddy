@@ -5,7 +5,9 @@
 
 
 <ion-content *ngIf="case" class="ion-padding">
-
+  <a routerLink="" style="color: #606c70">
+    <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
+  </a>
 
   <ion-card>
     <ion-item style="--border-style:none;">
@@ -24,9 +26,19 @@
     <ion-badge class="hashtag">
       {{case.hashtag}}
     </ion-badge>
+
     <ion-card-content>
       <p>{{case.content}}</p>
     </ion-card-content>
+
+    <div style="position: absolute; bottom: 0%; left: 2%;">
+      <p>10個人收藏，2人詢問中...</p>
+    </div>
+
+    <div style="position: absolute; bottom: 2%; right: 2%;">
+      <ion-icon name="heart-outline" style="width: 25px; height: 25px; margin-right: 10px; color: #f58898"></ion-icon>
+      <ion-icon name="paper-plane-outline" style="width: 25px; height: 25px; margin-right: 5px;"></ion-icon>
+    </div>
 
   </ion-card>
 </ion-content>
