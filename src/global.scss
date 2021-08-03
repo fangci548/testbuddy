@@ -35,6 +35,36 @@
   src: url(../src/assets/font/SirinStencil-Regular.ttf);
 }
 
+@font-face {
+  font-family: catshop;
+  src: url(../src/assets/font/CatShop.ttf);
+}
+
+@font-face {
+  font-family: vogue;
+  src: url(../src/assets/font/Vogue.ttf);
+}
+
+@font-face {
+  font-family: cinzel;
+  src: url(../src/assets/font/CinzelDecorative-Regular.ttf);
+}
+
+@font-face {
+  font-family: bwi;
+  src: url(../src/assets/font/bwvivantregular.ttf);
+}
+
+@font-face {
+  font-family: christamas;
+  src: url(../src/assets/font/ChristmasOrnaments-1Gn0L.ttf);
+}
+
+@font-face {
+  font-family: time;
+  src: url(../src/assets/font/TIMESS__.ttf);
+}
+
 ion-toolbar {  //!toolbar 的背景色
   --background: #95E1D3;
 }

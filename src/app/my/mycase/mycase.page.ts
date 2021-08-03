@@ -8,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 
 export class MycasePage implements OnInit {
 
+
+
   mode = "paired";
-  constructor() { }
+
+  constructor(
+
+  ) { }
 
   ngOnInit() {
+
   }
 
 }

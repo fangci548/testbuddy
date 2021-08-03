@@ -45,7 +45,11 @@ const routes: Routes = [
   {
     path: 'casedetail',
     loadChildren: () => import('./casedetail/casedetail.module').then( m => m.CasedetailPageModule)
+  },  {
+    path: 'signin',
+    loadChildren: () => import('./signin/signin.module').then( m => m.SigninPageModule)
   },
+
 
 
 

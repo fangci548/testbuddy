@@ -2,6 +2,7 @@ import { Case } from '../../models/case.model';
 import { CaseService } from './../../service/case.service';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-othercase-collect',
   templateUrl: './othercase-collect.page.html',
@@ -9,13 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class OthercaseCollectPage implements OnInit {
-
-  cases: Case[] = [];
-
-  constructor(
-    private caseService: CaseService) { }
+  heart = "true";
+  constructor() { }
 
   ngOnInit() {
     this.cases = this.caseService.getCases();
   }
+
+
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Case } from 'src/app/models/case.model';
+import { MycaseService } from 'src/app/service/mycase.service';
 
 @Component({
   selector: 'app-mycase-unpaired',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MycaseUnpairedPage implements OnInit {
 
-  constructor() { }
+  cases: Case[] = [];
+
+  constructor(
+    private caseService: MycaseService
+  ) { }
 
   ngOnInit() {
+    this.cases = this.caseService.getMyUnpairedCases();
   }
 
 }

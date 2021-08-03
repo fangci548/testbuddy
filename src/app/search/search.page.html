@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 
-<ion-content>
+<!-- <ion-content> -->
   <ion-list>
     <!-- <a [routerlink]="[/detail]"> -->
       <ion-item *ngFor="let case of cases"  (click)="showDetail(case)">
-        <ion-avatar  style="width: 50px; height: 50px; margin-right: 15px;"><img
+        <ion-avatar  style="width: 60px; height: 60px; margin-right: 15px;"><img
             src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png"></ion-avatar>
         <ion-label>
-          <p>{{case.userName}}
-            <ion-icon style="float: right;" name="heart-outline"></ion-icon>
-          </p>
-          <ion-badge>{{case.hashtag}}</ion-badge>
-          <p>{{case.content}}</p>
+        <h1>
+          {{case.userName}}
+          <ion-icon style="float: right;" name="ellipsis-horizontal-outline"></ion-icon><br>
+          <ion-badge slot="start">{{case.hashtag}}</ion-badge>
+          <ion-icon color="success" style="float: right;" name="checkmark-outline"></ion-icon>
+        </h1>
+        <p><br>{{case.content}}</p>
         </ion-label>
       </ion-item>
     <!-- </a> -->
   </ion-list>
-</ion-content>
+<!-- </ion-content> -->
