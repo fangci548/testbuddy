@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { OthercaseService } from './../../service/othercase.service';
+import { Case } from '../../models/case.model';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-othercase-running',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OthercaseRunningPage implements OnInit {
 
-  constructor() { }
+
+  cases: Case[] = [];
+
+  constructor(
+    private caseService: OthercaseService) { }
 
   ngOnInit() {
+    this.cases = this.caseService. getOTHERRUNCASE();
   }
 
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { OthercaseService } from './../../service/othercase.service';
 import { Case } from '../../models/case.model';
-import { CaseService } from './../../service/case.service';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-othercase-done',
@@ -14,10 +14,10 @@ export class OthercaseDonePage implements OnInit {
   cases: Case[] = [];
 
   constructor(
-    private caseService: CaseService) { }
+    private caseService: OthercaseService) { }
 
   ngOnInit() {
-    this.cases = this.caseService.getCases();
+    this.cases = this.caseService.getOTHERDONECASE();
   }
 
 }

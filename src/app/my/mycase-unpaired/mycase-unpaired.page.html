@@ -2,7 +2,6 @@
 <ion-list>
   <ion-item *ngFor="let case of cases">
     <ion-avatar>
-
       <img src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png">
     </ion-avatar>
     <ion-label>
@@ -11,7 +10,7 @@
         <ion-icon style="float: right;" name="ellipsis-horizontal-outline"></ion-icon><br>
         <ion-badge slot="start">{{case.hashtag}}</ion-badge>
         <!-- <ion-badge slot="end">22</ion-badge> -->
-        <ion-icon color="success" style="float: right;" name="checkmark-outline"></ion-icon>
+        <ion-icon color="danger" style="float: right;" name="close-outline"></ion-icon>
       </h1>
       <p><br>{{case.content}}</p>
     </ion-label>
