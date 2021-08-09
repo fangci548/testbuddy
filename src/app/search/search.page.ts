@@ -5,6 +5,7 @@ import { IonSearchbar , NavController} from '@ionic/angular';
 import { Case } from '../models/case.model';
 
 
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.page.html',
