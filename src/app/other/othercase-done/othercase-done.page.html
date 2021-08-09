@@ -4,14 +4,15 @@
   <ion-list>
     <!-- <a [routerlink]="[/detail]"> -->
       <ion-item *ngFor="let case of cases" >
-        <ion-avatar  style="width: 50px; height: 50px; margin-right: 15px;"><img
+        <ion-avatar ><img
             src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png"></ion-avatar>
         <ion-label>
-          <p>{{case.userName}}</p>
-          <ion-badge>{{case.hashtag}}</ion-badge>
-          <ion-icon color="danger" style="float: right;" name="close-outline"></ion-icon>
-          <ion-icon color="success" style="float: right;" name="checkmark-outline"></ion-icon>
-          <p>{{case.content}}</p>
+          <h1>{{case.userName}}<br>
+            <ion-badge>{{case.hashtag}}</ion-badge>
+            <ion-icon *ngIf="case.id % 3 == 0" color="danger" style="float: right;" name="close-outline"></ion-icon>
+            <ion-icon *ngIf="case.id % 3 != 0" color="success" style="float: right;" name="checkmark-outline"></ion-icon>
+          </h1>
+          <p><br>{{case.content}}</p>
         </ion-label>
       </ion-item>
     <!-- </a> -->

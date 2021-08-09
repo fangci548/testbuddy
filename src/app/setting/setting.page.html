@@ -4,7 +4,10 @@
   <ion-item style="padding: 10px; --border-style:none;">
     <img style="height: 100px; width: 100px; " src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png">
     <p style="font-size: 28px; margin: 0px 8px;" class="sir">Eden Tsai<br><p style="font-size: 15px; margin: 0px; opacity: 0.5;">大學生</p></p>
-
+    <p style="float: right; font-size: 18px; margin-left: 20px;">
+      <ion-icon name="star" style="height: 50px; width: 50px; color: #fce38a;"></ion-icon>
+      <br>4.5 / 5
+    </p>
   </ion-item>
 
   <ion-card>
@@ -36,17 +39,17 @@
       <ion-label>BUBBY COIN管理</ion-label>
     </ion-item>
 
-    <ion-item href="#" class="setting">
+    <ion-item [routerLink]="['../../setting/personal-manage']" routerLinkActive="router-link-active"  class="setting">
       <ion-icon name="person-outline"></ion-icon>
       <ion-label>個人資料設定</ion-label>
     </ion-item>
 
-    <ion-item href="#" class="setting">
+    <ion-item [routerLink]="['../../setting/pay-manage']" routerLinkActive="router-link-active"  class="setting">
       <ion-icon name="card-outline"></ion-icon>
       <ion-label>付款帳號設定</ion-label>
     </ion-item>
 
-    <ion-item href="#" class="setting">
+    <ion-item [routerLink]="['../../setting/account-manage']" routerLinkActive="router-link-active"  class="setting">
       <ion-icon name="sync-outline"></ion-icon>
       <ion-label>帳號綁定/設定</ion-label>
     </ion-item>

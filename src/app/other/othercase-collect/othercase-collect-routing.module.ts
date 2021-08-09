@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: OthercaseCollectPage
+  },
+  {
+    path: 'collect-detail/:id',
+    loadChildren: () => import('./collect-detail/collect-detail.module').then( m => m.CollectDetailPageModule)
   }
 ];
 
