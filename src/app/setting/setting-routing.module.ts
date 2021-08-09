@@ -11,6 +11,18 @@ const routes: Routes = [
   {
     path: 'coin-manage',
     loadChildren: () => import('./coin-manage/coin-manage.module').then( m => m.CoinManagePageModule)
+  },
+  {
+    path: 'personal-manage',
+    loadChildren: () => import('./personal-manage/personal-manage.module').then( m => m.PersonalManagePageModule)
+  },
+  {
+    path: 'pay-manage',
+    loadChildren: () => import('./pay-manage/pay-manage.module').then( m => m.PayManagePageModule)
+  },
+  {
+    path: 'account-manage',
+    loadChildren: () => import('./account-manage/account-manage.module').then( m => m.AccountManagePageModule)
   }
 ];
 

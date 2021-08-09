@@ -1,7 +1,8 @@
 {
   "name": "buddy-coin",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
