@@ -1,5 +1,3 @@
-import { CasedetailPageModule } from './../casedetail/casedetail.module';
-import { CasedetailPage } from './../casedetail/casedetail.page';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

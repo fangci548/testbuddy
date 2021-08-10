@@ -11,7 +11,7 @@
 
 <ion-content>
 
-  <ion-card  style="margin-top: 10px;">
+  <ion-card  style="margin-top: 10px;" (click)="showdetail(case)">
     <ion-item style="--border-style:none;">
       <ion-avatar style="width: 50px; height: 50px;">
         <img src="https://picsum.photos/id/69/100/100">
@@ -48,7 +48,7 @@
           <img src="https://picsum.photos/100/100?random=12" />
         </div>
       </div>
-      <div class="text">這是妳的對話文字</div>
+      <div class="text">你對三角形的理解到哪?</div>
     </div>
     <div class="user local">
       <div class="avatar">
@@ -56,7 +56,7 @@
           <img src="https://picsum.photos/id/69/100/100">
         </div>
       </div>
-      <div class="text">這是我的對話文字</div>
+      <div class="text">我知道三角形的內角和是180度</div>
     </div>
     <div class="user remote">
       <div class="avatar">
@@ -64,7 +64,7 @@
           <img src="https://picsum.photos/100/100?random=12" />
         </div>
       </div>
-      <div class="text">這是妳的對話文字</div>
+      <div class="text">是的，那你知道三角形的三邊長關係嗎?</div>
     </div>
     <div class="user remote">
       <div class="avatar">
@@ -72,7 +72,7 @@
           <img src="https://picsum.photos/100/100?random=12" />
         </div>
       </div>
-      <div class="text">這是妳的對話文字</div>
+      <div class="text">兩邊和必需大於另一邊的長度</div>
     </div>
     <div class="user local">
       <div class="avatar">
@@ -80,7 +80,7 @@
           <img src="https://picsum.photos/id/69/100/100">
         </div>
       </div>
-      <div class="text">這是我的對話文字</div>
+      <div class="text">原來是這樣啊!</div>
     </div>
   </div>
 
