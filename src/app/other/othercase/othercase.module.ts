@@ -1,3 +1,4 @@
+import { HeadPage } from './../../head/head.page';
 import { OthercaseRunningPage } from './../othercase-running/othercase-running.page';
 import { OthercaseDonePage } from './../othercase-done/othercase-done.page';
 import { NgModule } from '@angular/core';
@@ -22,7 +23,8 @@ import { OthercaseCollectPage } from '../othercase-collect/othercase-collect.pag
     OthercasePage,
     OthercaseCollectPage,
     OthercaseDonePage,
-    OthercaseRunningPage
+    OthercaseRunningPage,
+    HeadPage
   ]
 })
 export class OthercasePageModule {}

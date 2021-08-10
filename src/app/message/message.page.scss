@@ -1,0 +1,134 @@
+ion-card {
+  height: 30%;
+  width: 100%;
+  margin: 0px;
+  border-radius: 10px;
+  border: solid #CCCCBF;
+
+  ion-label {
+    margin-left: 10px;
+    margin-top: 0px;
+    font-size: 25px;
+    font-family: singleday;
+  }
+}
+
+.hashtag {
+  margin-left: 20%;
+  color: #606c70;
+  background-color: #CDDAFD;
+  height: 25px;
+  border-radius: 10px;
+}
+
+ion-card-content {
+  margin-left: 10%;
+  height: 45px;
+  font-size: 18px;
+  color: #606c70;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+}
+
+.coinbar {
+  background-color: #76C893;
+  width: 70px;
+  height: 25px;
+  border-radius: 10px;
+  font-family: sirinstencil;
+  font-size: 20px;
+  left: auto;
+  // float: left;
+}
+
+.ion-padding {
+  --padding-start: var(--ion-padding, 5px);
+  --padding-end: var(--ion-padding, 5px);
+  --padding-top: var(--ion-padding, 5px);
+  --padding-bottom: var(--ion-padding, 16px);
+}
+
+.user {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+
+  .avatar {
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .pic {
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  .text {
+    background-color: #aaa;
+    padding: 8px;
+    border-radius: 10px;
+    position: relative;
+  }
+}
+
+.remote {
+  .text {
+    margin-left: 5px;
+    margin-right: 80px;
+    color: #000;
+    background-color: #F4ACB7;
+
+    // &::before {
+    //   border-right: 10px solid #4179f1;
+    //   left: -10px;
+    // }
+  }
+}
+
+.local {
+  justify-content: flex-end;
+
+  .text {
+    margin-right: 5px;
+    margin-left: 80px;
+    order: -1;
+    background-color: #FAD2E1;
+    color: #333;
+
+    // &::before {
+    //   border-left: 10px solid #fff;
+    //   right: -10px;
+    // }
+  }
+}
+
+.remote,
+.local {
+  & .text::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  .text {
+    font-weight: 300;
+    box-shadow: 0 0 10px #888;
+  }
+}
+
+.input{
+  margin-top: 50px;
+  border: solid;
+  width: 98%;
+  border-radius: 20px;
+  border-color: #606c70;
+}

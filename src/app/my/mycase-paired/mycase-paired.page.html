@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<ion-content>
 <ion-list>
-  <ion-item *ngFor="let case of cases">
+  <ion-item *ngFor="let case of cases" (click)="showDetail(case)">
     <ion-avatar>
 
-      <img src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png">
+      <img src="https://picsum.photos/100/100?random= + '{{case.id}} + 88'" />
     </ion-avatar>
     <ion-label>
       <h1>
@@ -72,3 +73,5 @@
 
 
 </ion-list>
+
+</ion-content>

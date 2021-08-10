@@ -17,7 +17,7 @@ export class SearchPage implements OnInit {
 
   // public list: Array<Object> = [];
   // public searcheditem: any;
-
+  searchTerm: string;
   cases: Case[] = [];
 
   constructor(
