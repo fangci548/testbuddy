@@ -31,10 +31,10 @@ export const MYPAIRCASE: Case[] = [
   },
   {
     id: 5,
-    userName: "ccc",
-    content: "英文聽說讀寫, 準備多益",
-    hashtag: "#多益",
-    pay: 30
+    userName: "C++教學",
+    content: "想從頭學C++，徵求有相關背景的同學教我，每週上課三次，需有教材",
+    hashtag: "#C++",
+    pay: 3000
   },
   {
     id: 6,
