@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { Case } from 'src/app/models/case.model';
 import { MycaseService } from 'src/app/service/mycase.service';
 
@@ -12,11 +13,15 @@ export class MycaseUnpairedPage implements OnInit {
   cases: Case[] = [];
 
   constructor(
-    private caseService: MycaseService
+    private caseService: MycaseService,
+    private navCtrl: NavController
   ) { }
 
   ngOnInit() {
     this.cases = this.caseService.getMyUnpairedCases();
   }
 
+  showdetail(selectedCase: Case){
+    this.navCtrl.navigateForward('mycase-unpaired/detail/' + selectedCase.id)
+  }
 }

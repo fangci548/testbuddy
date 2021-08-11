@@ -126,9 +126,10 @@ ion-card-content {
 }
 
 .input{
-  margin-top: 30px;
   border: solid;
   width: 98%;
   border-radius: 20px;
   border-color: #606c70;
+  position: absolute;
+  bottom: 2%;
 }

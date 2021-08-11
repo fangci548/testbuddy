@@ -1,7 +1,8 @@
+import { Case } from 'src/app/models/case.model';
+import { MessageModalComponent } from './message-modal/message-modal.component';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NavController } from '@ionic/angular';
-import { Case } from '../models/case.model';
+import { ModalController, NavController } from '@ionic/angular';
 import { MycaseService } from '../service/mycase.service';
 
 @Component({
@@ -16,7 +17,9 @@ export class MessagePage implements OnInit {
   constructor(
     private route: ActivatedRoute,
     public nav: NavController,
-    private caseService: MycaseService) { }
+    private caseService: MycaseService,
+    private modalCtrl: ModalController
+    ) { }
 
   ngOnInit() {
     const caseId = Number(this.route.snapshot.params.id);
@@ -27,5 +30,15 @@ export class MessagePage implements OnInit {
   goback() {
     this.nav.back();
     this.nav.navigateBack('/tabs/tab3');
+  }
+
+  async openModal(){
+
+    const modal = await this.modalCtrl.create({
+      component: MessageModalComponent,
+      componentProps: {title: this.case.userName, content: this.case.content, id: this.case.id, hashtag: this.case.hashtag, pay: this.case.pay}
+    });
+
+    await modal.present();
   }
 }

@@ -43,10 +43,6 @@ const routes: Routes = [
     loadChildren: () => import('./my/mycase-unpaired/mycase-unpaired.module').then( m => m.MycaseUnpairedPageModule)
   },
   {
-    path: 'casedetail',
-    loadChildren: () => import('./message/casedetail/casedetail.module').then( m => m.CasedetailPageModule)
-  },
-  {
     path: 'signin',
     loadChildren: () => import('./signin/signin.module').then( m => m.SigninPageModule)
   },

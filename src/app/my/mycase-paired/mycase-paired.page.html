@@ -12,7 +12,9 @@
         <ion-icon style="float: right;" name="ellipsis-horizontal-outline"></ion-icon><br>
         <ion-badge slot="start">{{case.hashtag}}</ion-badge>
         <!-- <ion-badge slot="end">22</ion-badge> -->
-        <ion-icon color="success" style="float: right;" name="checkmark-outline"></ion-icon>
+        <ion-badge *ngIf="case.id == 1 || case.id == 2" slot="start"
+          style="float: right; height: 30px; width: 30px; background-color: #F38181; --padding-top: 6px;">
+          {{case.id + 1}}</ion-badge>
       </h1>
       <p><br>{{case.content}}</p>
     </ion-label>

@@ -3,7 +3,7 @@ import { viewClassName } from '@angular/compiler';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSearchbar , NavController} from '@ionic/angular';
 import { Case } from '../models/case.model';
-
+import { Moment } from 'moment';
 
 
 @Component({
@@ -48,4 +48,5 @@ export class SearchPage implements OnInit {
   //     })
   //   }
   // }
+
 }
