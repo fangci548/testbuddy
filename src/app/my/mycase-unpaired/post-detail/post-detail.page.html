@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>message</ion-title> -->
+    <a (click)="goback()" style="color: #606c70">
+      <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
+      BACK
+    </a>
+    <a style="color: #606c70; float: right; margin-right: 3%;" >
+      <ion-icon name="ellipsis-horizontal-outline" style="width: 30px; height: 30px;"></ion-icon>
+    </a>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="case" class="ion-padding">
+  <!-- <a (click)="goback()" style="color: #606c70">
+    <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
+  </a> -->
+  <ion-card class="detail">
+    <ion-item style="--border-style:none;">
+      <ion-avatar style="width: 50px; height: 50px;">
+        <img src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png">
+      </ion-avatar>
+      <ion-label>
+        {{case.userName}}
+        <p style="float: right;">2小時前</p>
+      </ion-label>
+    </ion-item>
+    <ion-badge class="coinbar">
+      <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+      {{case.pay}}
+    </ion-badge>
+    <ion-badge class="hashtag">
+      {{case.hashtag}}
+    </ion-badge>
+
+    <ion-card-content>
+      <p>{{case.content}}</p>
+    </ion-card-content>
+
+    <div style="position: absolute; bottom: 0%; left: 2%;">
+      <p>10個人收藏，3人詢問中...</p>
+    </div>
+
+    <div style="position: absolute; bottom: 2%; right: 2%;">
+      <ion-icon name="heart-outline" style="width: 25px; height: 25px; margin-right: 10px; color: #f58898"></ion-icon>
+      <ion-icon name="paper-plane-outline" style="width: 25px; height: 25px; margin-right: 5px;"></ion-icon>
+    </div>
+
+  </ion-card>
+
+  <ion-card class="person">
+    <ion-item class="setting">
+      <ion-avatar style="margin-right: 15px;">
+        <img src="https://picsum.photos/100/100?random= + '{{case.id}} + 55'" />
+      </ion-avatar>
+      <ion-label>Lin sin</ion-label>
+      <p style="float: right; font-size: 18px; margin: 0px; margin-left: 20px;">
+        <ion-icon name="star" style="height: 30px; width: 30px; color: #fce38a;"></ion-icon>
+        4.5 / 5
+      </p>
+    </ion-item>
+
+    <ion-item  class="setting">
+      <ion-avatar style="margin-right: 15px;">
+        <img src="https://picsum.photos/100/100?random= + '{{case.id}} + 33'" />
+      </ion-avatar>
+      <ion-label>Tai ying</ion-label>
+      <p style="float: right; font-size: 18px; margin: 0px; margin-left: 20px;">
+        <ion-icon name="star" style="height: 30px; width: 30px; color: #fce38a;"></ion-icon>
+        4.2 / 5
+      </p>
+    </ion-item>
+
+    <ion-item class="setting">
+      <ion-avatar style="margin-right: 15px;">
+        <img src="https://picsum.photos/100/100?random= + '{{case.id}} + 99'" />
+      </ion-avatar>
+      <ion-label>Mushroom</ion-label>
+      <p style="float: right; font-size: 18px; margin: 0px; margin-left: 20px;">
+        <ion-icon name="star" style="height: 30px; width: 30px; color: #fce38a;"></ion-icon>
+        3.9 / 5
+      </p>
+    </ion-item>
+
+  </ion-card>
+</ion-content>

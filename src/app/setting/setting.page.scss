@@ -32,7 +32,12 @@ ion-title {
 }
 
 ion-card{
+  height: 30%;
   border-radius: 20px;
+}
+
+.set-bar{
+  height: 50%;
 }
 
 .cardbox{  //!儲值轉讓中間的線還沒加上//
@@ -44,6 +49,7 @@ ion-card{
 
 .setting{
   color: #606c70;
+  height: 20%;
   ion-label{
     font-family: sirinstencil;
   }

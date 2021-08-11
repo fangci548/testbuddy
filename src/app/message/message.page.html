@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>message</ion-title> -->
+    <a (click)="goback()" style="color: #606c70">
+      <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
+      BACK
+    </a>
+    <a style="color: #606c70; float: right; margin-right: 3%;">
+      <ion-icon name="ellipsis-horizontal-outline" style="width: 30px; height: 30px;"></ion-icon>
+    </a>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card  style="margin-top: 10px;" (click)="openModal()">
+    <ion-item style="--border-style:none;">
+      <ion-avatar style="width: 50px; height: 50px;">
+        <img src="https://picsum.photos/id/69/100/100">
+      </ion-avatar>
+      <ion-label>
+        {{case.userName}}
+        <p style="float: right;">2小時前</p>
+
+      </ion-label>
+    </ion-item>
+    <ion-badge class="hashtag">
+      {{case.hashtag}}
+    </ion-badge>
+
+    <ion-card-content>
+      {{case.content}}
+    </ion-card-content>
+
+    <div style="position: absolute; bottom: 0%; left: 2%;">
+      <p>10個人收藏，2人詢問中...</p>
+    </div>
+
+    <div style="position: absolute; bottom: 2%; right: 2%;">
+      <ion-icon name="heart-outline" style="width: 25px; height: 25px; margin-right: 10px; color: #f58898"></ion-icon>
+      <ion-icon name="paper-plane-outline" style="width: 25px; height: 25px; margin-right: 5px;"></ion-icon>
+    </div>
+
+  </ion-card>
+
+  <div class="dialogue" style="margin-top: 10px;">
+    <div class="user remote">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/100/100?random=12" />
+        </div>
+      </div>
+      <div class="text">你對三角形的理解到哪?</div>
+    </div>
+    <div class="user local">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/id/69/100/100">
+        </div>
+      </div>
+      <div class="text">我知道三角形的內角和是180度</div>
+    </div>
+    <div class="user remote">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/100/100?random=12" />
+        </div>
+      </div>
+      <div class="text">是的，那你知道三角形的三邊長關係嗎?</div>
+    </div>
+    <div class="user remote">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/100/100?random=12" />
+        </div>
+      </div>
+      <div class="text">兩邊和必需大於另一邊的長度</div>
+    </div>
+    <div class="user local">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/id/69/100/100">
+        </div>
+      </div>
+      <div class="text">原來是這樣啊!</div>
+    </div>
+  </div>
+
+  <ion-item class="input">
+    <ion-input placeholder="輸入文字" ></ion-input>
+    <ion-icon name="paper-plane-outline"></ion-icon>
+  </ion-item>
+</ion-content>

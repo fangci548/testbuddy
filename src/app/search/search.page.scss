@@ -2,6 +2,8 @@
   *!toolbar background 在 global.scss
 */
 
+
+
 ion-title{
   font-family: singleday;
   width: 150px;
@@ -14,7 +16,18 @@ ion-title{
   padding: 10px;
 }
 
-.coinbar{
+ion-content{
+  ion-badge{
+    color: #606c70;
+    --background: #8ac6d1;
+    font-size: 15px;
+    border-radius: 15px;
+    height: 25px;
+  }
+
+}
+
+.coinbar {
   background-color: #809BCE;
   width: 100px;
   height: 35px;
@@ -22,13 +35,6 @@ ion-title{
   font-family: sirinstencil;
   font-size: 20px;
   left: auto;
-}
-
-ion-badge{
-  color: #606c70;
-  background-color: #8ac6d1;
-  font-family: singleday;
-  font-size: 15px;
 }
 
 h1 {

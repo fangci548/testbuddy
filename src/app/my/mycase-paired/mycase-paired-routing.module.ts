@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: MycasePairedPage
+  },
+  {
+    path: 'detail/:id',
+    loadChildren: () => import('../../message/message.module').then(m => m.MessagePageModule)
   }
 ];
 

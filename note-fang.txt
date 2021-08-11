@@ -42,7 +42,11 @@
 6.
 7.
 
-
+8/10
+1. 限制顯示行數
+    overflow:hidden; 是將超過的部分進行隱藏
+    text-overflow: ellipsis; 則是在被 overflow的內容加上刪節號(…)
+    webkit-line-clamp: 可以限制內容行數
 
 
 !!!!*****還沒做到的*****!!!!

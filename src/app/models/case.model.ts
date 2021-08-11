@@ -4,4 +4,5 @@ export interface Case {
   hashtag: string;
   content: string;
   pay: number;
+  date: string;
 }

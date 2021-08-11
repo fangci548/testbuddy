@@ -13,7 +13,7 @@
 .ion-padding {
   --padding-start: var(--ion-padding, 5px);
   --padding-end: var(--ion-padding, 5px);
-  --padding-top: var(--ion-padding, 5px);
+  --padding-top: var(--ion-padding, 20px);
   --padding-bottom: var(--ion-padding, 16px);
 }
 
@@ -21,6 +21,7 @@ ion-card {
   height: 80%;
   width: 100%;
   margin: 0px;
+  margin-top: 5%;
   border-radius: 10px;
   border: solid #CCCCBF;
 

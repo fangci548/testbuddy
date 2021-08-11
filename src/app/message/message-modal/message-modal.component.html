@@ -1,35 +1,35 @@
-
 <!DOCTYPE html>
-
 <ion-header>
-  <app-head></app-head>
+  <ion-toolbar>
+    <!-- <ion-title>{{title}}</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissModal()" style="font-size: 18px;">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="case" class="ion-padding">
-  <a (click)="goback()" style="color: #606c70">
-    <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
-  </a>
+<ion-content>
   <ion-card>
     <ion-item style="--border-style:none;">
       <ion-avatar style="width: 50px; height: 50px;">
         <img src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png">
       </ion-avatar>
       <ion-label>
-        {{case.userName}}
+      {{title}}
         <p style="float: right;">2小時前</p>
 
       </ion-label>
     </ion-item>
     <ion-badge class="coinbar">
       <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
-      {{case.pay}}
+      {{pay}}
     </ion-badge>
     <ion-badge class="hashtag">
-      {{case.hashtag}}
+      {{hashtag}}
     </ion-badge>
 
     <ion-card-content>
-      <p>{{case.content}}</p>
+      <p>{{content}}</p>
     </ion-card-content>
 
     <div style="position: absolute; bottom: 0%; left: 2%;">
@@ -42,5 +42,4 @@
     </div>
 
   </ion-card>
-
 </ion-content>
