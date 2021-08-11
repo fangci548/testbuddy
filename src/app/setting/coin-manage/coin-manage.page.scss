@@ -9,19 +9,17 @@
   // float: left;
 }
 
-ion-select {
-  width: 50px;
-  height: 50px;
+// ion-select {
 
   /* Applies to the value and placeholder color */
-  color: #76C893;
-  background-color: #76C893;
+  //color: #f1f5f3;
+  //background-color: #76C893;
   /* Set a different placeholder color */
-  --placeholder-color: #76C893;
+  // --placeholder-color: #76C893;
 
   /* Set full opacity on the placeholder */
-  --placeholder-opacity: 1;
-}
+  // --placeholder-opacity: 1;
+//}
 
 .ion-padding {
   --padding-start: var(--ion-padding, 5px);
@@ -36,6 +34,7 @@ ion-card{
   margin: 0px;
   border-radius: 10px;
   border: solid #CCCCBF;
+
   ion-label {
     margin-left: 10px;
     margin-top: 0px;
@@ -52,10 +51,29 @@ ion-card{
   height: 25px;
   border-radius: 10px;
 }
+
+ion-button{
+  height: 25px;
+  border-radius: 10px;
+  background-color: #060325;
+}
+
+
 ion-card-content{
   margin-left: 10%;
   p{
     font-size: 20px;
-    color: #606c70;
+    color: #3cbee9;
   }
+}
+
+.cardbox{  //!儲值轉讓中間的線還沒加上//
+  --border-style:none;  //儲值 轉讓的底線 移除
+  text-align:center;   //文字置中
+  font-size: 20px;
+  color: #606c70;
+}
+p{
+  font-size: 10px;
+  color: #606c70;
 }
