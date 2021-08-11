@@ -18,20 +18,30 @@
           Eden
           <p style="float: right;">2小時前</p>
 
+
           <ion-badge class="coinbar">
             <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
-
+            <ion-item>
              <ion-select  okText="Okay" cancelText="Dismiss">
                 <ion-select-option value="20">20</ion-select-option>
                 <ion-select-option value="30">30</ion-select-option>
                 <ion-select-option value="40">40</ion-select-option>
                 <ion-select-option value="50">50</ion-select-option>
              </ion-select>
-
-
+            </ion-item>
           </ion-badge>
 
+
         </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Select</ion-label>
+        <ion-select class="custom-options" interface="popover">
+          <ion-select-option value="brown" class="brown-option">Brown</ion-select-option>
+          <ion-select-option value="blonde">Blonde</ion-select-option>
+          <ion-select-option value="black">Black</ion-select-option>
+          <ion-select-option value="red">Red</ion-select-option>
+        </ion-select>
       </ion-item>
 
       <ion-badge class="hashtag">
@@ -39,7 +49,7 @@
       </ion-badge>
 
       <ion-card-content>
-       <ion-input placeholder="Type something"></ion-input>
+        <ion-textarea  rows="10 " cols="20" placeholder="Enter any notes here..."></ion-textarea>
       </ion-card-content>
 
       <div style="position: absolute; bottom: 0%; left: 2%;">

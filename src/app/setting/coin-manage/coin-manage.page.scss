@@ -5,19 +5,19 @@
   border-radius: 10px;
   font-family: sirinstencil;
   font-size: 5px;
-  left: auto;
+
   // float: left;
 }
 
 ion-select {
-  width: 20px;
-  height: 25px;
-  left: auto;
+  width: 50px;
+  height: 50px;
+
   /* Applies to the value and placeholder color */
-  color: #fdfcf9;
+  color: #76C893;
   background-color: #76C893;
   /* Set a different placeholder color */
-  --placeholder-color: #f5f1f3;
+  --placeholder-color: #76C893;
 
   /* Set full opacity on the placeholder */
   --placeholder-opacity: 1;
