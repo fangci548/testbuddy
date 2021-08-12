@@ -2,12 +2,70 @@
 <app-head></app-head>
 
 <ion-content>
-  <div>
+
     <a (click)="goback()" style="color: #606c70">
       <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
-    </a>
-    <p>付款設定</p>
-  </div>
+    付款設定
+  </a>
 
+  <h1><ion-label>代幣轉讓</ion-label></h1>
+<!-- Input with placeholder -->
+<ion-label>
+  <ion-input placeholder="   name">
+    用戶名稱:
+  </ion-input>
+</ion-label>
+
+<!-- Number type input -->
+<ion-label>
+  <ion-input type="number"  placeholder="  phone number">
+    請輸入手機號碼:
+  </ion-input>
+</ion-label>
+<!-- Disabled input -->
+<ion-input value="Disabled" disabled></ion-input>
+
+<!-- Readonly input -->
+<ion-input value="金額" readonly ></ion-input>
+  <ion-input></ion-input>
+
+<!-- Input with clear button when there is a value -->
+
+<ion-label>
+  <ion-input clearInput value="備註">
+  </ion-input>
+</ion-label>
+
+
+<ion-item>
+  <ion-label position="floating">Floating Label</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">Fixed Label</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Stacked Label</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-card>
+  <ion-text >
+    注意事項
+    <h2>
+      The quick brown fox jumps over the lazy dog
+      Vestibulum eleifend lorem nec neque interdum varius.
+      Sed in neque at nibh congue tincidunt.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+      Suspendisse potenti.
+       Donec magna odio, semper ac nibh et, vestibulum eleifend felis. Donec pulvinar ex non quam vulputate malesuada in a magna.
+      Praesent massa arcu, vehicula id pharetra et, cursus at lectus.
+    </h2>
+  </ion-text>
+
+</ion-card>
 
 </ion-content>
