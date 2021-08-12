@@ -12,6 +12,7 @@ import { Component, OnInit} from '@angular/core';
 export class OthercaseCollectPage implements OnInit {
 
   cases: Case[] = [];
+  filteredCases: Case[] = [];
 
   constructor(
     private caseService: OthercaseService,
@@ -20,9 +21,25 @@ export class OthercaseCollectPage implements OnInit {
 
   ngOnInit() {
     this.cases = this.caseService.getOTHERCOLLECTCASE();
+    this.filteredCases = this.cases;
   }
 
   showdetail(selectedCase: Case){
     this.navCtrl.navigateForward('othercase-collect/collect-detail/' + selectedCase.id)
+  }
+
+  onChangeKeyword(event: any) {
+    let keyword = event.target.value.trim();
+    console.log(keyword);
+    if (keyword !== '') {
+      this.filteredCases = [];
+      for (let aCase of this.cases) {
+        if (aCase.content.includes(keyword) || aCase.hashtag.includes(keyword)) {
+          this.filteredCases.push(aCase);
+        }
+      }
+    } else {
+      this.filteredCases = this.cases;
+    }
   }
 }
