@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { OthercaseRunningPageRoutingModule } from './othercase-running-routing.module';
 
 import { OthercaseRunningPage } from './othercase-running.page';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OthercaseRunningPageRoutingModule
+    OthercaseRunningPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [OthercaseRunningPage]
 })

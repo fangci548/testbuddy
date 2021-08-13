@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Case } from 'src/app/models/case.model';
 import { MycaseService } from 'src/app/service/mycase.service';
@@ -10,6 +10,7 @@ import { MycaseService } from 'src/app/service/mycase.service';
 })
 export class MycaseUnpairedPage implements OnInit {
 
+  @Input() mysearch: string;
   cases: Case[] = [];
 
   constructor(

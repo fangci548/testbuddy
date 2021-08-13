@@ -1,3 +1,4 @@
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MycaseUnpairedPage } from './../mycase-unpaired/mycase-unpaired.page';
 import { MycasePairedPage } from './../mycase-paired/mycase-paired.page';
 import { MycaseDonePage } from './../mycase-done/mycase-done.page';
@@ -15,7 +16,8 @@ import { MycasePage } from './mycase.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    MycasePageRoutingModule
+    MycasePageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [
     MycasePage,

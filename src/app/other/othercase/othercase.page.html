@@ -14,9 +14,11 @@
       <ion-label>已完成</ion-label>
     </ion-segment-button>
   </ion-segment>
+  <!-- (ionChange)="onChangeKeyword($event)" -->
+  <ion-searchbar [(ngModel)]="othersearch"></ion-searchbar>
 
-  <app-othercase-collect *ngIf="mode == 'collect'"></app-othercase-collect>
-  <app-othercase-running *ngIf="mode == 'running'"></app-othercase-running>
-  <app-othercase-done *ngIf="mode == 'done'"></app-othercase-done>
+  <app-othercase-collect *ngIf="mode == 'collect'" [othersearch]="othersearch"></app-othercase-collect>
+  <app-othercase-running *ngIf="mode == 'running'" [othersearch]="othersearch"></app-othercase-running>
+  <app-othercase-done *ngIf="mode == 'done'" [othersearch]="othersearch"></app-othercase-done>
 
 </ion-content>

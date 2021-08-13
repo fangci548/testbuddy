@@ -1,6 +1,6 @@
 import { OthercaseService } from './../../service/othercase.service';
 import { Case } from '../../models/case.model';
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-othercase-done',
@@ -9,7 +9,7 @@ import { Component, OnInit} from '@angular/core';
 })
 
 export class OthercaseDonePage implements OnInit {
-
+  @Input() othersearch: string;
 
   cases: Case[] = [];
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Case } from './../../models/case.model';
 import { MycaseService } from './../../service/mycase.service';
@@ -11,6 +11,7 @@ import { MycaseService } from './../../service/mycase.service';
 })
 export class MycasePairedPage implements OnInit {
 
+  @Input() mysearch: string;
   cases: Case[] = [];
 
   constructor(

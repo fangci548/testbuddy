@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { MycasePairedPageRoutingModule } from './mycase-paired-routing.module';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MycasePairedPage } from './mycase-paired.page';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { MycasePairedPage } from './mycase-paired.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    MycasePairedPageRoutingModule
+    MycasePairedPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [MycasePairedPage]
 })

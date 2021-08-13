@@ -1,5 +1,5 @@
 import { MycaseService } from './../../service/mycase.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Case } from './../../models/case.model';
 
 @Component({
@@ -10,7 +10,7 @@ import { Case } from './../../models/case.model';
 export class MycaseDonePage implements OnInit {
 
   cases: Case[] = [];
-
+  @Input() mysearch: string;
   constructor(
     private caseService: MycaseService
   ) { }

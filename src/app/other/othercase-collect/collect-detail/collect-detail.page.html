@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 
 <ion-header>
-  <app-head></app-head>
+  <ion-toolbar>
+    <!-- <ion-title>message</ion-title> -->
+    <a (click)="goback()" style="color: #606c70">
+      <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
+      BACK
+    </a>
+    <a style="color: #606c70; float: right; margin-right: 3%;">
+      <ion-icon name="ellipsis-horizontal" style="width: 30px; height: 30px;"></ion-icon>
+    </a>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="case" class="ion-padding">
-  <a (click)="goback()" style="color: #606c70">
+<ion-content class="ion-padding">
+  <!-- <a (click)="goback()" style="color: #606c70">
     <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
-  </a>
+  </a> -->
   <ion-card>
     <ion-item style="--border-style:none;">
       <ion-avatar style="width: 50px; height: 50px;">

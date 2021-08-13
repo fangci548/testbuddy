@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<app-head></app-head>
+
+<ion-content>
+  <a (click)="goback()" style="color: #606c70">
+    <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
+    BACK
+  </a>
+
+  <ion-card>
+    <ion-item style="--border-style:none;">
+
+      <ion-avatar style="width: 50px; height: 50px;">
+        <img src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png">
+      </ion-avatar>
+
+      <ion-label>
+        Eden
+        <p style="float: right;">2小時前</p>
+
+        <ion-badge class="coinbar">
+          <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+
+          <ion-select okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="20">20</ion-select-option>
+            <ion-select-option value="30">30</ion-select-option>
+            <ion-select-option value="40">40</ion-select-option>
+            <ion-select-option value="50">50</ion-select-option>
+          </ion-select>
+
+
+        </ion-badge>
+
+      </ion-label>
+    </ion-item>
+
+    <ion-badge class="hashtag">
+      <ion-input placeholder="#Add..." style="width: 50px; height: 20px;"></ion-input>
+    </ion-badge>
+
+    <ion-card-content>
+      <ion-input placeholder="Type something"></ion-input>
+    </ion-card-content>
+
+    <div style="position: absolute; bottom: 0%; left: 2%;">
+      <p>10個人收藏，2人詢問中...</p>
+    </div>
+
+    <div style="position: absolute; bottom: 2%; right: 2%; ">
+      <ion-col>
+        <ion-item class="cardbox">
+          <ion-label>發布</ion-label>
+          <ion-icon name="arrow-redo-outline" style="width: 20px; height: 20px;"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </div>
+
+  </ion-card>
+
+</ion-content>

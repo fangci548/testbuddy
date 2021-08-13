@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { MycaseUnpairedPageRoutingModule } from './mycase-unpaired-routing.module';
 
 import { MycaseUnpairedPage } from './mycase-unpaired.page';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MycaseUnpairedPageRoutingModule
+    MycaseUnpairedPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [MycaseUnpairedPage]
 })

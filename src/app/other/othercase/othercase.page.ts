@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-othercase',
@@ -9,7 +9,16 @@ export class OthercasePage implements OnInit {
   mode = "collect";
   constructor() { }
 
+  // @Output() searchEvent = new EventEmitter();
+
   ngOnInit() {
   }
+
+  // onChangeKeyword($event){
+  //   let keyword = event.target.value.trim();
+     // console.log(keyword);
+  //   this.onChangeKeyword.emit(keyword);
+  //   console.log(keyword);
+  // }
 
 }

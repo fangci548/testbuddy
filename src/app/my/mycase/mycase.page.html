@@ -16,9 +16,16 @@
     </ion-segment-button>
   </ion-segment>
 <!-- List of Text Items -->
+  <ion-searchbar [(ngModel)]="mysearch"></ion-searchbar>
 
-  <app-mycase-done *ngIf="mode == 'done'"></app-mycase-done>
-  <app-mycase-unpaired *ngIf="mode == 'un-paired'"></app-mycase-unpaired>
-  <app-mycase-paired *ngIf="mode == 'paired'"></app-mycase-paired>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed"[routerLink]="['../../mycase/addcase']" routerLinkActive="router-link-active" >
+    <ion-fab-button style="--background: #9DD3A8; --color: #606c70">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <app-mycase-done *ngIf="mode == 'done'" [mysearch]="mysearch"></app-mycase-done>
+  <app-mycase-unpaired *ngIf="mode == 'un-paired'" [mysearch]="mysearch"></app-mycase-unpaired>
+  <app-mycase-paired *ngIf="mode == 'paired'" [mysearch]="mysearch"></app-mycase-paired>
 
 </ion-content>
