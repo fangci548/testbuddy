@@ -1,9 +1,89 @@
+
+<!DOCTYPE html>
 <ion-header>
   <ion-toolbar>
-    <ion-title>givemoney</ion-title>
+    <!-- <ion-title>message</ion-title> -->
+    <a (click)="goback()" style="color: #606c70">
+      <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
+      BACK
+    </a>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+<ion-content>
+
+    <ion-card class="top">
+      <ion-card-header>
+        <ion-card-subtitle>
+          <img src="../assets/img/B_adobespark.png" style= " width: 40px; height: 40px;">
+          代幣轉讓
+        </ion-card-subtitle>
+
+
+<form>
+
+  <ion-item>受饋用戶資料</ion-item>
+          <!-- Input with placeholder -->
+        <ion-label>
+          <ion-input placeholder="   name">
+           <p>用戶名稱 :</p>
+
+          </ion-input>
+        </ion-label>
+
+
+        <!-- Number type input -->
+        <ion-label>
+          <ion-input type="number"  placeholder="   number">
+           <p> 手機號碼 : </p>
+          </ion-input>
+        </ion-label>
+
+
+
+
+        <ion-label>
+            <ion-input type="number"  placeholder="   $">
+             <p> 金額 :</p>
+            </ion-input>
+          </ion-label>
+
+
+
+          <!-- Input with clear button when there is a value -->
+          <ion-label>
+            <ion-input placeholder="   (可省略)">
+              <p>備註 : </p>
+            </ion-input>
+
+          </ion-label>
+
+    </form>
+  </ion-card-header>
+ </ion-card>
+
+<ion-card >
+  <ion-text >
+    注意事項
+    <h2>
+      。 請注意受饋用戶名稱是否正確<br>
+      。 請填寫有效的手機號碼<br>
+      。 單筆轉讓上限為1000點<br>
+      。 轉讓前請再次確認金額<br>
+      。 可利用備註欄註明交易說明<br>
+
+    </h2>
+  </ion-text>
+
+</ion-card>
+
+
+  <ion-button color= success>
+    確認送出
+  </ion-button>
+
 
 </ion-content>

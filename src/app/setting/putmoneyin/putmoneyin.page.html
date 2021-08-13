@@ -1,9 +1,87 @@
+<!DOCTYPE html>
 <ion-header>
   <ion-toolbar>
-    <ion-title>putmoneyin</ion-title>
+    <!-- <ion-title>message</ion-title> -->
+    <a (click)="goback()" style="color: #606c70">
+      <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
+      BACK
+    </a>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>代幣商店</ion-card-subtitle>
+      <ion-card-title>
+      <p>當前餘額</p><img src="../assets/img/B_adobespark.png" style= " width: 40px; height: 40px;">
+      100
+    </ion-card-title>
+  </ion-card-header>
+
+    <ion-card-content>
+      購買須知:
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-list>
+    <ion-item class="coinbar">
+       <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+      <ion-label>10 代幣</ion-label>
+
+      <ion-button style= "float: right;" color= success>
+        TWD 30
+      </ion-button>
+
+    </ion-item>
+    <ion-item class="coinbar">
+      <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+      <ion-label>30 代幣</ion-label>
+      <ion-button style= "float: right;" color= success>
+        TWD 90
+      </ion-button>
+    </ion-item>
+    <ion-item class="coinbar">
+      <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+      <ion-label>50 代幣</ion-label>
+      <ion-button style= "float: right;" color= success>
+        TWD 150
+      </ion-button>
+    </ion-item>
+    <ion-item class="coinbar">
+      <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+      <ion-label>70 代幣</ion-label>
+      <ion-button style= "float: right;" color= success>
+        TWD 210
+      </ion-button>
+    </ion-item>
+    <ion-item class="coinbar">
+      <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+      <ion-label>90 代幣</ion-label>
+      <ion-button style= "float: right;" color= success>
+        TWD 270
+      </ion-button>
+    </ion-item>
+    <ion-item class="coinbar">
+      <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+      <ion-label>120 代幣</ion-label>
+      <ion-button style= "float: right;" color= success>
+        TWD 360
+      </ion-button>
+    </ion-item>
+    <ion-item style= "position: absolute;"class="coinbar">
+      <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+      <ion-label>150 代幣</ion-label>
+      <ion-button style= "float: right;" color= success>
+        TWD 450
+      </ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-givemoney',
   templateUrl: './givemoney.page.html',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GivemoneyPage implements OnInit {
 
-  constructor() { }
+  constructor(public nav: NavController) { }
 
   ngOnInit() {
+  }
+
+  goback() {
+    this.nav.back();
+    this.nav.navigateBack('/tabs/tab4');
+
   }
 
 }
