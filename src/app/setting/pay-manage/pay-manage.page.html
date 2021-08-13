@@ -8,64 +8,70 @@
     付款設定
   </a>
 
-  <h1><ion-label>代幣轉讓</ion-label></h1>
-<!-- Input with placeholder -->
-<ion-label>
-  <ion-input placeholder="   name">
-    用戶名稱:
-  </ion-input>
-</ion-label>
-
-<!-- Number type input -->
-<ion-label>
-  <ion-input type="number"  placeholder="  phone number">
-    請輸入手機號碼:
-  </ion-input>
-</ion-label>
-<!-- Disabled input -->
-<ion-input value="Disabled" disabled></ion-input>
-
-<!-- Readonly input -->
-<ion-input value="金額" readonly ></ion-input>
-  <ion-input></ion-input>
-
-<!-- Input with clear button when there is a value -->
-
-<ion-label>
-  <ion-input clearInput value="備註">
-  </ion-input>
-</ion-label>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <img src="../assets/img/B_adobespark.png" style= " width: 40px; height: 40px;">
+        代幣轉讓
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
 
 
-<ion-item>
-  <ion-label position="floating">Floating Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+    <ion-card>
+      <!-- Input with placeholder -->
+      <ion-label>
+        <ion-input placeholder="   name">
+          <p>用戶名稱:</p>
+        </ion-input>
+      </ion-label>
+     </ion-card>
 
-<ion-item>
-  <ion-label position="fixed">Fixed Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+     <ion-card>
+      <!-- Number type input -->
+      <ion-label>
+        <ion-input type="number"  placeholder="   phone number">
+          <p>請輸入手機號碼:</p>
+        </ion-input>
+      </ion-label>
+    </ion-card>
 
-<ion-item>
-  <ion-label position="stacked">Stacked Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+    <ion-card>
+      <ion-label>
+          <ion-input type="number"  placeholder="   $">
+            <p>金額:</p>
+          </ion-input>
+        </ion-label>
+    </ion-card>
 
+    <ion-card>
+        <!-- Input with clear button when there is a value -->
+        <ion-label>
+          <ion-input placeholder="   (可省略)">
+            <p>備註:</p>
+          </ion-input>
+
+        </ion-label>
+     </ion-card>
 <ion-card>
   <ion-text >
     注意事項
     <h2>
-      The quick brown fox jumps over the lazy dog
-      Vestibulum eleifend lorem nec neque interdum varius.
-      Sed in neque at nibh congue tincidunt.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-      Suspendisse potenti.
-       Donec magna odio, semper ac nibh et, vestibulum eleifend felis. Donec pulvinar ex non quam vulputate malesuada in a magna.
-      Praesent massa arcu, vehicula id pharetra et, cursus at lectus.
+      。 請注意欲轉讓之用戶名稱是否正確<br>
+      。 請填寫有效的手機號碼<br>
+      。 單筆交易上限為1000點<br>
+      。 轉讓前請再次確認金額<br>
+      。 可利用備註欄註明交易說明<br>
+
     </h2>
   </ion-text>
 
 </ion-card>
+
+
+  <ion-button color= success>
+    確認送出
+  </ion-button>
+
 
 </ion-content>

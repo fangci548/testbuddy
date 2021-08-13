@@ -7,54 +7,64 @@
     BACK
   </a>
 
-  <ion-card>
-    <ion-item style="--border-style:none;">
+    <ion-card>
+      <ion-item style="--border-style:none;">
 
-      <ion-avatar style="width: 50px; height: 50px;">
-        <img src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png">
-      </ion-avatar>
+          <ion-avatar style="width: 50px; height: 50px;">
+            <img src="../../assets/img/[removal.ai]_tmp-60ed2eadc397b.png">
+          </ion-avatar>
+          <ion-label> Eden </ion-label>
 
-      <ion-label>
-        Eden
-        <p style="float: right;">2小時前</p>
-
-        <ion-badge class="coinbar">
-          <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
-
-          <ion-select okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="20">20</ion-select-option>
-            <ion-select-option value="30">30</ion-select-option>
-            <ion-select-option value="40">40</ion-select-option>
-            <ion-select-option value="50">50</ion-select-option>
-          </ion-select>
-
-
-        </ion-badge>
-
-      </ion-label>
-    </ion-item>
-
-    <ion-badge class="hashtag">
-      <ion-input placeholder="#Add..." style="width: 50px; height: 20px;"></ion-input>
-    </ion-badge>
-
-    <ion-card-content>
-      <ion-input placeholder="Type something"></ion-input>
-    </ion-card-content>
-
-    <div style="position: absolute; bottom: 0%; left: 2%;">
-      <p>10個人收藏，2人詢問中...</p>
-    </div>
-
-    <div style="position: absolute; bottom: 2%; right: 2%; ">
-      <ion-col>
-        <ion-item class="cardbox">
-          <ion-label>發布</ion-label>
-          <ion-icon name="arrow-redo-outline" style="width: 20px; height: 20px;"></ion-icon>
+          <ion-chip class="coinbar">
+            <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
+             <ion-select  okText="Okay" cancelText="Dismiss">
+                <ion-select-option value="20">20</ion-select-option>
+                <ion-select-option value="30">30</ion-select-option>
+                <ion-select-option value="40">40</ion-select-option>
+                <ion-select-option value="50">50</ion-select-option>
+             </ion-select>
+          </ion-chip>
         </ion-item>
-      </ion-col>
-    </div>
 
-  </ion-card>
+      <ion-badge class="hashtag">
+        <ion-input placeholder="#Add..." style="width: 50px; height: 20px;"></ion-input>
+      </ion-badge>
 
-</ion-content>
+      <ion-card-content>
+        <ion-textarea  rows="10 " cols="20" placeholder="Enter any notes here..."></ion-textarea>
+      </ion-card-content>
+
+      <div style="position: absolute; bottom: 5%; left: 2%;">
+        <ion-col>
+            <p>教學方式</p>
+            <ion-button color= light size="default">
+            <ion-select  okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="1">面對面</ion-select-option>
+              <ion-select-option value="2">線上教學</ion-select-option>
+              <ion-select-option value="3">視訊</ion-select-option>
+            </ion-select>
+          </ion-button>
+        </ion-col>
+      </div>
+
+      <div style="position: absolute; bottom: 2%; right: 5%; " >
+        <ion-col>
+          <ion-item class="cardbox">
+            <ion-button color= light size="default">
+              發布
+              <ion-icon name="arrow-redo-outline" style="width: 20px; height: 20px;"></ion-icon>
+            </ion-button>
+          </ion-item>
+          <ion-item class="cardbox">
+            <ion-button color= light size="default">
+              取消
+              <ion-icon name="close-outline" style="width: 20px; height: 20px;"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-col>
+      </div>
+
+    </ion-card>
+
+  </ion-content>
+

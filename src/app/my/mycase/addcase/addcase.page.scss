@@ -5,23 +5,21 @@
   border-radius: 10px;
   font-family: sirinstencil;
   font-size: 5px;
-  left: auto;
+
   // float: left;
 }
 
-ion-select {
-  width: 20px;
-  height: 25px;
-  left: auto;
+// ion-select {
+
   /* Applies to the value and placeholder color */
-  color: #fdfcf9;
-  background-color: #76C893;
+  //color: #f1f5f3;
+  //background-color: #76C893;
   /* Set a different placeholder color */
-  --placeholder-color: #f5f1f3;
+  // --placeholder-color: #76C893;
 
   /* Set full opacity on the placeholder */
-  --placeholder-opacity: 1;
-}
+  // --placeholder-opacity: 1;
+//}
 
 .ion-padding {
   --padding-start: var(--ion-padding, 5px);
@@ -30,7 +28,7 @@ ion-select {
   --padding-bottom: var(--ion-padding, 16px);
 }
 
-ion-card {
+ion-card{
   height: 80%;
   width: 100%;
   margin: 0px;
@@ -46,7 +44,7 @@ ion-card {
 }
 
 
-.hashtag {
+.hashtag{
   margin-left: 20%;
   color: #606c70;
   background-color: #CDDAFD;
@@ -54,11 +52,28 @@ ion-card {
   border-radius: 10px;
 }
 
-ion-card-content {
-  margin-left: 10%;
+ion-button{
+  height: 25px;
+  border-radius: 10px;
+  background-color: #060325;
+}
 
-  p {
+
+ion-card-content{
+  margin-left: 10%;
+  p{
     font-size: 20px;
-    color: #606c70;
+    color: #3cbee9;
   }
+}
+
+.cardbox{  //!儲值轉讓中間的線還沒加上//
+  --border-style:none;  //儲值 轉讓的底線 移除
+  text-align:center;   //文字置中
+  font-size: 20px;
+  color: #606c70;
+}
+p{
+  font-size: 10px;
+  color: #606c70;
 }

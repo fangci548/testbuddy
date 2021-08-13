@@ -2,11 +2,21 @@ h2 {
   font-size: 20%;
   color: #db1f1f
 }
-h1 {
-  font-size: 100%;
-  margin-left: 50px;
- ion-label {
-   height: 50px;
 
- }
+ion-card-subtitle {
+  font-size: 50px;
+  margin-left: 30px;
+
+}
+
+p {
+  font-size: 20px;
+}
+h1 {
+  font-size: 5px;
+}
+
+ion-button {
+  width: 90%;
+  margin-left: 15px;
 }
