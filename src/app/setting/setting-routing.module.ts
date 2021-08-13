@@ -23,6 +23,14 @@ const routes: Routes = [
   {
     path: 'account-manage',
     loadChildren: () => import('./account-manage/account-manage.module').then( m => m.AccountManagePageModule)
+  },
+  {
+    path: 'putmoneyin',
+    loadChildren: () => import('./putmoneyin/putmoneyin.module').then( m => m.PutmoneyinPageModule)
+  },
+  {
+    path: 'givemoney',
+    loadChildren: () => import('./givemoney/givemoney.module').then( m => m.GivemoneyPageModule)
   }
 ];
 

@@ -19,13 +19,13 @@
 
     <ion-row >
       <ion-col style="border-right: solid #CCCCBF 1px;">
-        <ion-item class="cardbox">
+        <ion-item class="cardbox" [routerLink]="['../../setting/putmoneyin']" routerLinkActive="router-link-active" >
           <ion-icon name="enter-outline"></ion-icon>
           <ion-label>儲值</ion-label>
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item href="#" class="cardbox">
+        <ion-item class="cardbox" [routerLink]="['../../setting/givemoney']" routerLinkActive="router-link-active" >
           <ion-icon name="swap-horizontal-outline"></ion-icon>
           <ion-label>轉讓</ion-label>
         </ion-item>
