@@ -4,6 +4,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSearchbar , NavController} from '@ionic/angular';
 import { Case } from '../models/case.model';
 import { Moment } from 'moment';
+import { SearchCase } from '../models/searchcase.model';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class SearchPage implements OnInit {
   // public list: Array<Object> = [];
   // public searcheditem: any;
   searchTerm: string;
-  cases: Case[] = [];
+  cases: SearchCase[] = [];
+  collect: boolean = false;
 
   constructor(
     private caseService: CaseService,
@@ -29,7 +31,7 @@ export class SearchPage implements OnInit {
     this.cases = this.caseService.getCases();
   }
 
-  showDetail(selectedCase: Case){
+  showDetail(selectedCase: SearchCase){
     this.navCtrl.navigateForward('search/detail/'+selectedCase.id)
   }
   // ionViewDidEnter(){
@@ -48,5 +50,16 @@ export class SearchPage implements OnInit {
   //     })
   //   }
   // }
+
+  collectchange(selectedCase: SearchCase){
+    console.log(selectedCase.collect);
+    if(selectedCase.collect == true){
+      selectedCase.collect = false;
+    }
+    else{
+      selectedCase.collect = true;
+    }
+    console.log(selectedCase.collect);
+  }
 
 }

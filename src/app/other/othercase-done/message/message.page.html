@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>message</ion-title> -->
+    <a (click)="goback()" style="color: #606c70">
+      <ion-icon name="return-down-back-outline" style="width: 30px; height: 30px;"></ion-icon>
+      BACK
+    </a>
+    <a style="color: #606c70; float: right; margin-right: 3%;">
+      <ion-icon name="ellipsis-horizontal" style="width: 30px; height: 30px;"></ion-icon>
+    </a>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card  style="margin-top: 10px;" (click)="openModal()">
+    <ion-item style="--border-style:none;">
+      <ion-avatar style="width: 50px; height: 50px;">
+        <img src="https://picsum.photos/id/69/100/100">
+      </ion-avatar>
+      <ion-label>
+        {{case.userName}}
+        <p style="float: right;">2小時前</p>
+
+      </ion-label>
+    </ion-item>
+    <ion-badge class="hashtag">
+      {{case.hashtag}}
+    </ion-badge>
+
+    <ion-card-content>
+      {{case.content}}
+    </ion-card-content>
+
+    <div style="position: absolute; bottom: 0%; left: 2%;">
+      <p>10個人收藏，2人詢問中...</p>
+    </div>
+
+    <div style="position: absolute; bottom: 2%; right: 2%;">
+      <ion-icon name="heart-outline" style="width: 25px; height: 25px; margin-right: 10px; color: #f58898"></ion-icon>
+      <ion-icon name="paper-plane-outline" style="width: 25px; height: 25px; margin-right: 5px;"></ion-icon>
+    </div>
+
+  </ion-card>
+
+  <div class="dialogue" style="margin-top: 10px;">
+    <div class="user remote">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/100/100?random=12" />
+        </div>
+      </div>
+      <div class="text">你們現在生物學到第幾章了?</div>
+    </div>
+    <div class="user local">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/id/69/100/100">
+        </div>
+      </div>
+      <div class="text">學到第3章了</div>
+    </div>
+    <div class="user remote">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/100/100?random=12" />
+        </div>
+      </div>
+      <div class="text">了解，那我們從三酸甘油脂開始</div>
+    </div>
+    <div class="user remote">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/100/100?random=12" />
+        </div>
+      </div>
+      <div class="text">1分子甘油與3分子脂肪酸可形成1分三酸甘油脂</div>
+    </div>
+    <div class="user local">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/id/69/100/100">
+        </div>
+      </div>
+      <div class="text">原來是這樣啊!</div>
+    </div>
+    <div class="user local" >
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/id/69/100/100">
+        </div>
+      </div>
+      <div class="text" style="width: 100px; ">已支付<br>
+        <p style="align-self: center; font-size: 20px;">
+          <img src="../assets/img/B_adobespark.png" style="float: left; width: 30px; height: 30px;">
+          30
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <ion-item class="input">
+    <ion-input placeholder="本案件已結束" ></ion-input>
+    <ion-icon name="paper-plane-outline"></ion-icon>
+  </ion-item>
+</ion-content>

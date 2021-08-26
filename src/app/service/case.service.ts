@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Case } from '../models/case.model';
+import { SearchCase } from '../models/searchcase.model';
 import { CASE } from './case.mock';
 
 
@@ -8,7 +8,7 @@ import { CASE } from './case.mock';
 })
 export class CaseService {
 
-  cases: Case[] = CASE;
+  cases: SearchCase[] = CASE;
   constructor() { }
 
 
@@ -16,7 +16,7 @@ export class CaseService {
     return this.cases;
   }
 
-  getCase(id: number): Case {
+  getCase(id: number): SearchCase {
     for (let i = 0; i < this.cases.length; i++) {
       if (this.cases[i].id === id) {
         return this.cases[i];

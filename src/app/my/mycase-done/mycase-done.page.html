@@ -2,7 +2,7 @@
 
 <ion-content>
 <ion-list>
-  <ion-item *ngFor="let case of cases | filter:mysearch">
+  <ion-item *ngFor="let case of cases | filter:mysearch" (click)="showDetail(case)">
     <ion-avatar>
 
       <img src="https://picsum.photos/100/100?random= + {{case.id}}"/>

@@ -15,57 +15,45 @@
 
 <ion-content>
 
-    <ion-card class="top">
-      <ion-card-header>
-        <ion-card-subtitle>
-          <img src="../assets/img/B_adobespark.png" style= " width: 40px; height: 40px;">
-          代幣轉讓
-        </ion-card-subtitle>
-
-
-<form>
-
-  <ion-item>受饋用戶資料</ion-item>
-          <!-- Input with placeholder -->
+  <ion-card class="top">
+    <!-- <ion-card-header> -->
+      <ion-card-subtitle>
+        <img src="../assets/img/B_adobespark.png" style= " width: 40px; height: 40px;">
+        代幣轉讓
+      </ion-card-subtitle>
+      <form>
+        <p style="border-bottom: solid 0.5px #606c70;">輸入受饋用戶資料</p>
+        <!-- Input with placeholder -->
         <ion-label>
-          <ion-input placeholder="   name">
-           <p>用戶名稱 :</p>
-
+          <ion-input placeholder="name">
+            <p>用戶名稱 :</p>
           </ion-input>
         </ion-label>
-
-
         <!-- Number type input -->
         <ion-label>
-          <ion-input type="number"  placeholder="   number">
-           <p> 手機號碼 : </p>
+          <ion-input type="number"  placeholder="number">
+            <p> 手機號碼 : </p>
           </ion-input>
         </ion-label>
 
-
-
-
         <ion-label>
-            <ion-input type="number"  placeholder="   $">
-             <p> 金額 :</p>
-            </ion-input>
-          </ion-label>
+          <ion-input type="number">
+            <p> 金額 :</p>
+          </ion-input>
+        </ion-label>
 
+        <!-- Input with clear button when there is a value -->
+        <ion-label>
+          <ion-input placeholder="   (可省略)">
+            <p>備註 : </p>
+          </ion-input>
+        </ion-label>
 
+      </form>
+    <!-- </ion-card-header> -->
+  </ion-card>
 
-          <!-- Input with clear button when there is a value -->
-          <ion-label>
-            <ion-input placeholder="   (可省略)">
-              <p>備註 : </p>
-            </ion-input>
-
-          </ion-label>
-
-    </form>
-  </ion-card-header>
- </ion-card>
-
-<ion-card >
+<ion-card>
   <ion-text >
     注意事項
     <h2>

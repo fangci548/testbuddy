@@ -50,7 +50,8 @@
       <ion-label>
         <h1>
           {{case.userName}}
-          <ion-icon style="float: right; color: #F4ACB7;" name="heart-outline"></ion-icon><br>
+          <ion-icon *ngIf="case.collect === true" (click)="collectchange(case)" style="float: right; color: #F4ACB7;" name="heart" ></ion-icon><br>
+          <ion-icon *ngIf="case.collect === false" (click)="collectchange(case)" style="float: right; color: #F4ACB7;" name="heart-outline"></ion-icon><br>
           <ion-badge slot="start">{{case.hashtag}}</ion-badge>
         </h1>
         <p style="float: left;"> <img style="height: 20px; width: 20px; margin-right: 5px;" src="../../assets/img/B_adobespark.png" />{{case.pay}}

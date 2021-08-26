@@ -1,8 +1,8 @@
 import { CaseService } from './../../service/case.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
-import { Case } from '../../models/case.model';
 import { NavController } from '@ionic/angular';
+import { SearchCase } from 'src/app/models/searchcase.model';
 
 @Component({
   selector: 'app-search-detail',
@@ -11,7 +11,7 @@ import { NavController } from '@ionic/angular';
 })
 export class SearchDetailPage implements OnInit {
 
-  case?: Case;
+  case?: SearchCase;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,4 +30,14 @@ export class SearchDetailPage implements OnInit {
     this.nav.navigateBack('/tabs/tab1');
   }
 
+  collectchange(selectedCase: SearchCase) {
+    console.log(selectedCase.collect);
+    if (selectedCase.collect == true) {
+      selectedCase.collect = false;
+    }
+    else {
+      selectedCase.collect = true;
+    }
+    console.log(selectedCase.collect);
+  }
 }
