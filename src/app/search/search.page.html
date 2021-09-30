@@ -43,7 +43,8 @@
 <ion-content>
   <ion-list>
     <!-- <a [routerlink]="[/detail]"> -->
-    <ion-item *ngFor="let case of cases | filter: searchTerm" (click)="showDetail(case)">
+    <ion-item *ngFor="let case of cases | filter: searchTerm" (click)="showDetail(case)"
+      (click)="getDiferenceInDay()">
       <ion-avatar style="width: 60px; height: 60px; margin-right: 15px;">
         <img src="https://picsum.photos/100/100?random= + '{{case.id}} + 55'" />
       </ion-avatar>
@@ -56,7 +57,7 @@
         </h1>
         <p style="float: left;"> <img style="height: 20px; width: 20px; margin-right: 5px;" src="../../assets/img/B_adobespark.png" />{{case.pay}}
         </p>
-        <p style="float:right; font-size: 15px;">{{case.date}}</p>
+        <!-- <p style="float:right; font-size: 15px;">{{case.date}}</p> -->
       </ion-label>
     </ion-item>
     <!-- </a> -->

@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
@@ -8,7 +9,10 @@ import { NavController } from '@ionic/angular';
 })
 export class AccountManagePage implements OnInit {
 
-  constructor(public nav: NavController) {
+  constructor(
+    public nav: NavController,
+
+    ) {
   }
 
   ngOnInit() {

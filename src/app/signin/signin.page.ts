@@ -1,6 +1,9 @@
+declare let window: any;
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Web3 from 'web3';
 import { UserService } from '../service/user.service';
+
 
 @Component({
   selector: 'app-signin',
@@ -15,7 +18,7 @@ export class SigninPage implements OnInit {
 
   constructor(
     private userService: UserService,
-    private router: Router
+    private router: Router,
   ) { }
 
 
@@ -31,4 +34,13 @@ export class SigninPage implements OnInit {
     }
 
   }
+
+  metamask() {
+    if (window.web3) {
+      // 有安裝 MetaMask
+      alert('Yes');
+    } else {
+      alert('沒有安裝 MetaMask');
+    }
+  };
 }

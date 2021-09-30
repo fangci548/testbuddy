@@ -1,9 +1,9 @@
 export interface SearchCase {
   id: number;
-  userName: string;
-  hashtag: string;
-  content: string;
+  userName: String;
+  hashtag: String;
+  content: String;
   pay: number;
-  date: string;
+  date: Date;
   collect: boolean;
 }

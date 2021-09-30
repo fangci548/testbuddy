@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 <ion-header>
   <ion-toolbar>
     <ion-title>BUDDY!</ion-title>
@@ -26,8 +26,8 @@
   <div class="ion-margin-vertical">
     <ion-button (click)="onSignin()" style="width: 100%; --border-radius: 20px; font-weight: 900; font-size: 18px;">Sign In</ion-button>
     <div style="height: 20px; margin: 10px; margin-bottom: 20px;" >
-      <a style="left: 35%; position: absolute;">註冊</a>
-      <a style="right: 35%; position: absolute;">忘記密碼</a>
+      <ion-button style="left: 20%; position: absolute;" (click)="metamask()">註冊</ion-button>
+      <ion-button style="right: 20%; position: absolute;">忘記密碼</ion-button>
     </div>
   </div>
 

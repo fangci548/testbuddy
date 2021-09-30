@@ -5,6 +5,7 @@ import { IonSearchbar , NavController} from '@ionic/angular';
 import { Case } from '../models/case.model';
 import { Moment } from 'moment';
 import { SearchCase } from '../models/searchcase.model';
+import * as moment from 'moment';
 
 
 @Component({
@@ -21,6 +22,8 @@ export class SearchPage implements OnInit {
   searchTerm: string;
   cases: SearchCase[] = [];
   collect: boolean = false;
+  date: Date = new Date('2021-09-10 00:15:37');
+
 
   constructor(
     private caseService: CaseService,
@@ -50,8 +53,16 @@ export class SearchPage implements OnInit {
   //     })
   //   }
   // }
+// theDate: Date
+  getDiferenceInDay() {
+    // console.log(moment.calendarFormat(this.date.getTime() - new Date().getTime()) );
+    // return Math.abs(this.date.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24);
+    console.log(moment(moment().valueOf()).format('YYYY-MM-DD hh:mm'));
+
+  }
 
   collectchange(selectedCase: SearchCase){
+    //this.date = new Date();
     console.log(selectedCase.collect);
     if(selectedCase.collect == true){
       selectedCase.collect = false;
@@ -59,7 +70,11 @@ export class SearchPage implements OnInit {
     else{
       selectedCase.collect = true;
     }
+    //console.log(this.getDiferenceInDay);
     console.log(selectedCase.collect);
+    console.log(this.date);
   }
+
+
 
 }
