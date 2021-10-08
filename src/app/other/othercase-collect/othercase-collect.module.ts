@@ -8,6 +8,7 @@ import { OthercaseCollectPageRoutingModule } from './othercase-collect-routing.m
 
 import { OthercaseCollectPage } from './othercase-collect.page';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     CommonModule,

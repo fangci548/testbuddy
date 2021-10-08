@@ -44,7 +44,10 @@
     </div>
 
     <div style="position: absolute; bottom: 2%; right: 2%;">
-      <ion-icon name="heart-outline" style="width: 25px; height: 25px; margin-right: 10px; color: #f58898"></ion-icon>
+      <ion-icon *ngIf="case.collect === false" (click)="collectchange(case)" name="heart-outline"
+        style="width: 25px; height: 25px; margin-right: 10px; color: #f58898"></ion-icon>
+      <ion-icon *ngIf="case.collect === true" (click)="collectchange(case)" name="heart"
+        style="width: 25px; height: 25px; margin-right: 10px; color: #f58898"></ion-icon>
       <ion-icon name="paper-plane-outline" style="width: 25px; height: 25px; margin-right: 5px;"></ion-icon>
     </div>
 

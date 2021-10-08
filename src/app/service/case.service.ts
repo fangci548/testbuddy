@@ -6,6 +6,7 @@ import { CASE } from './case.mock';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CaseService {
 
   cases: SearchCase[] = CASE;

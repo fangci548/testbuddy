@@ -8,7 +8,7 @@ export const CASE: SearchCase[] = [
     hashtag: "#數學",
     pay: 50,
     date: new Date(2021,9,10, 14, 50),
-    collect: false
+    collect: true
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ export const CASE: SearchCase[] = [
     hashtag: "#歷史",
     pay: 500,
     date: new Date(2021,9,10, 15, 50),
-    collect: false
+    collect: true
   },
   {
     id: 4,

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <ion-content>
+
   <!-- <ion-searchbar (ionChange)="onChangeKeyword($event)"></ion-searchbar> -->
   <ion-list>
     <!-- <a [routerlink]="[/detail]"> -->
@@ -12,7 +13,11 @@
           <h1>
             {{case.userName}}<br>
             <ion-badge slot="start">{{case.hashtag}}</ion-badge>
-            <ion-icon color="danger" style="float: right;"  name="heart"></ion-icon>
+            <!-- <ion-icon color="danger" style="float: right;"  name="heart"></ion-icon> -->
+            <ion-icon *ngIf="case.collect === true" (click)="collectchange(case)" style="float: right; color: #F4ACB7;"
+              name="heart"></ion-icon><br>
+            <ion-icon *ngIf="case.collect === false" (click)="collectchange(case)" style="float: right; color: #F4ACB7;"
+              name="heart-outline"></ion-icon><br>
           </h1>
           <p><br>{{case.content}}</p>
         </ion-label>

@@ -1,7 +1,9 @@
+import { SearchCase } from './../models/searchcase.model';
+import { CASE } from './case.mock';
 import { Injectable } from '@angular/core';
 import { Case } from '../models/case.model';
 import { OTHERDONECASE } from '../service/othercase.mock/othercase-done.mock';
-import { OTHERCOLLECTCASE } from '../service/othercase.mock/othercase-collect.mock';
+//import { OTHERCOLLECTCASE } from '../service/othercase.mock/othercase-collect.mock';
 import { OTHERRUNCASE } from '../service/othercase.mock/othercase-running.mock';
 
 @Injectable({
@@ -11,7 +13,7 @@ export class OthercaseService {
 
   donecases: Case[] = OTHERDONECASE;
   runcases: Case[] = OTHERRUNCASE;
-  collectcases: Case[] = OTHERCOLLECTCASE;
+  Cases: SearchCase[] = CASE;
 
   constructor() { }
 
@@ -29,13 +31,22 @@ export class OthercaseService {
   }
 
   getOTHERCOLLECTCASE(){
-    return this.collectcases;
+    var collect = this.Cases.filter(function (item, index, array) {
+
+      return item.collect === true;
+    });
+    return collect;
   }
 
-  getOTHERCOLLECTCASEs(id: number): Case {
-    for (let i = 0; i < this.collectcases.length; i++) {
-      if (this.collectcases[i].id === id) {
-        return this.collectcases[i];
+  // getcollectcase(): SearchCase{
+  //   return this.Cases;
+  // }
+
+  getOTHERCOLLECTCASEs(id: number): SearchCase {
+    for (let i = 0; i < this.Cases.length; i++) {
+
+      if (this.Cases[i].id === id) {
+        return this.Cases[i];
       }
     }
     return null;

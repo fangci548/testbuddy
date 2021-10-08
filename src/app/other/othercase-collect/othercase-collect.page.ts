@@ -2,7 +2,7 @@ import { NavController } from '@ionic/angular';
 import { OthercaseService } from './../../service/othercase.service';
 import { Case } from '../../models/case.model';
 import { Component, Input, OnInit, Output} from '@angular/core';
-// import { EventEmitter } from 'stream';
+import { SearchCase } from 'src/app/models/searchcase.model';
 
 
 @Component({
@@ -14,9 +14,10 @@ import { Component, Input, OnInit, Output} from '@angular/core';
 export class OthercaseCollectPage implements OnInit {
 
   @Input() othersearch: string;
-  cases: Case[] = [];
-  filteredCases: Case[] = [];
-
+  cases: SearchCase[] = [];
+  filteredCases: SearchCase[] = [];
+  collectcase : SearchCase[] = [];
+  //filterargs = { collect: 'true' };
   constructor(
     private caseService: OthercaseService,
     private navCtrl: NavController
@@ -25,7 +26,8 @@ export class OthercaseCollectPage implements OnInit {
   ngOnInit() {
     this.cases = this.caseService.getOTHERCOLLECTCASE();
     this.filteredCases = this.cases;
-    console.log(this.othersearch);
+    console.log(this.cases[0].userName);
+    // this.collectcase = this.cases.filter(this.filterByID);
   }
 
   showdetail(selectedCase: Case){
@@ -46,4 +48,27 @@ export class OthercaseCollectPage implements OnInit {
   //     this.filteredCases = this.cases;
   //   }
   // }
+  // filterByID(item) {
+  //   if (item.collect === 1) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
+  // filterDouble = this.cases.filter(function (item, index, array) {
+  //   return item.collect === 1;    // 取得陣列中雙數的物件
+  // });
+  collectchange(selectedCase: SearchCase) {
+    //this.date = new Date();
+    console.log(selectedCase.collect);
+    if (selectedCase.collect == true) {
+      selectedCase.collect = false;
+    }
+    else {
+      selectedCase.collect = true;
+    }
+    //console.log(this.getDiferenceInDay);
+    console.log(selectedCase.collect);
+  }
+
+
 }
