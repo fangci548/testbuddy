@@ -6,6 +6,7 @@ import { Case } from '../models/case.model';
 import { Moment } from 'moment';
 import { SearchCase } from '../models/searchcase.model';
 import * as moment from 'moment';
+// import { FirebaseDatabase, FirebaseFirestore } from 'angularfire2';
 
 
 @Component({
@@ -27,7 +28,8 @@ export class SearchPage implements OnInit {
 
   constructor(
     private caseService: CaseService,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    //private store: FirebaseFirestore
   ) { }
 
   ngOnInit() {

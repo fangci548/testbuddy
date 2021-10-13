@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>BUDDY</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="ion-margin-vertical">
+    <ion-label>帳號</ion-label>
+    <ion-input placeholder="Account" [(ngModel)]="account">
+    </ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-vertical">
+    <ion-label>密碼</ion-label>
+    <ion-input placeholder="Password" [(ngModel)]="password" type="password"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-vertical">
+    <ion-label>確認密碼</ion-label>
+    <ion-input placeholder="Password" [(ngModel)]="cpassword" type="password"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="notsame == 1" style="color: red;">
+    密碼不一致
+  </ion-item>
+  <ion-item *ngIf="exist == 1" style="color: red;">
+    帳號已存在
+  </ion-item>
+  <ion-item *ngIf="toofew == 1" style="color: red;">
+    密碼不可少於6個字元
+  </ion-item>
+  <ion-item *ngIf="nothing == 1" style="color: red;">
+    表格不可為空
+  </ion-item>
+
+  <div class="ion-margin-vertical">
+    <ion-button (click)="register()" style="width: 100%; --border-radius: 20px; font-weight: 900; font-size: 18px;">
+      註冊
+    </ion-button>
+    <ion-button [routerLink]="['../']"
+      style="width: 100%; --border-radius: 20px; font-weight: 900; font-size: 18px;">
+      取消
+    </ion-button>
+  </div>
+
+
+</ion-content>

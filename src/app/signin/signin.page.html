@@ -20,33 +20,42 @@
   </ion-item>
 
   <ion-item *ngIf="!validUser" style="color: red;">
-    Incorrect password!!!
+    帳號或密碼錯誤
+  </ion-item>
+  <ion-item *ngIf="!exist" style="color: red;">
+    此帳號不存在
+  </ion-item>
+  <ion-item *ngIf="!nothing" style="color: red;">
+    請輸入帳號及密碼
+  </ion-item>
+  <ion-item *ngIf="!emailvaild" style="color: red;">
+    請輸入帳號及密碼
   </ion-item>
 
   <div class="ion-margin-vertical">
-    <ion-button (click)="onSignin()" style="width: 100%; --border-radius: 20px; font-weight: 900; font-size: 18px;">Sign In</ion-button>
+    <ion-button (click)="login()" style="width: 100%; --border-radius: 20px; font-weight: 900; font-size: 18px;">Sign In</ion-button>
     <div style="height: 20px; margin: 10px; margin-bottom: 20px;" >
-      <ion-button style="left: 20%; position: absolute;" (click)="metamask()">註冊</ion-button>
+      <ion-button style="left: 20%; position: absolute;" [routerLink]="['register']">註冊</ion-button>
       <ion-button style="right: 20%; position: absolute;">忘記密碼</ion-button>
     </div>
   </div>
 
   <ion-card style="border: solid; border-color: #CCCCBF; border-radius: 20px; margin: 0px; width: 100%;">
-    <ion-item class="otherlogin">
+    <ion-item  class="otherlogin">
       <ion-label>
         <ion-icon name="logo-whatsapp"></ion-icon>
         LINE 登入
       </ion-label>
     </ion-item>
 
-    <ion-item href="#" class="otherlogin">
+    <ion-item (click)="googlelogin()" class="otherlogin">
       <ion-label>
         <ion-icon name="logo-google"></ion-icon>
         Gmail 登入
       </ion-label>
     </ion-item>
 
-    <ion-item href="#" class="otherlogin" style="--border-style: none;">
+    <ion-item (click)="login()" class="otherlogin" style="--border-style: none;">
       <ion-label>
         <ion-icon name="logo-facebook"></ion-icon>
         Facebook 登入
