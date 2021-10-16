@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'detail/:id',
-    loadChildren: () => import('../../message/message.module').then(m => m.MessagePageModule)
+    loadChildren: () => import('./message/message.module').then(m => m.MessagePageModule)
   }
 ];
 
