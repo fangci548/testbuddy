@@ -13,11 +13,15 @@
           <ion-avatar style="width: 50px; height: 50px;">
                 <img style=" border-radius: 50%;" src="https://picsum.photos/id/69/100/100">
           </ion-avatar>
-          <ion-label> Eden </ion-label>
+          <ion-card-content>
+
+              <ion-input [(ngModel)]="title" placeholder="請輸入標題" ></ion-input>
+
+          </ion-card-content>
 
           <ion-chip class="coinbar">
             <img src="../assets/img/B_adobespark.png" style="float: left; width: 20px; height: 20px;">
-              <ion-select  okText="Okay" cancelText="Dismiss">
+              <ion-select okText="Okay" cancelText="Dismiss" [(ngModel)]="pay">
                 <ion-select-option value="20">20</ion-select-option>
                 <ion-select-option value="30">30</ion-select-option>
                 <ion-select-option value="40">40</ion-select-option>
@@ -27,11 +31,11 @@
         </ion-item>
 
       <ion-badge class="hashtag">
-        <ion-input placeholder="#Add..." style="width: 50px; height: 20px;"></ion-input>
+        <ion-input placeholder="#Add..." style="width: 50px; height: 20px;" [(ngModel)]="hashtag"></ion-input>
       </ion-badge>
 
       <ion-card-content>
-        <ion-textarea  rows="10 " cols="20" placeholder="Enter any notes here..."></ion-textarea>
+        <ion-textarea [(ngModel)]="content" rows="10 " cols="20" placeholder="Enter any notes here..."></ion-textarea>
       </ion-card-content>
 
       <div style="position: absolute; bottom: 5%; left: 2%;">
@@ -50,7 +54,7 @@
       <div style="position: absolute; bottom: 2%; right: 5%; " >
         <ion-col>
           <ion-item class="cardbox">
-            <ion-button color= light size="default">
+            <ion-button color= light size="default" (click)="addcase()">
               發布
               <ion-icon name="arrow-redo-outline" style="width: 20px; height: 20px;"></ion-icon>
             </ion-button>

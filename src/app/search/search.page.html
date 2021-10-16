@@ -41,23 +41,29 @@
 
 
 <ion-content>
+  <!-- <iframe style="width: 100%; height: 100%;" src="http://140.134.25.44:3000/"></iframe> -->
   <ion-list>
+    <ul>
+      <li class="text" *ngFor="let item of items | async">
+        {{item.title}}
+      </li>
+    </ul>
     <!-- <a [routerlink]="[/detail]"> -->
-    <ion-item *ngFor="let case of cases | filter: searchTerm" (click)="showDetail(case)"
+    <ion-item *ngFor="let case of cases | async | filter: searchTerm" (click)="showDetail(case)"
       (click)="getDiferenceInDay()">
       <ion-avatar style="width: 60px; height: 60px; margin-right: 15px;">
-        <img src="https://picsum.photos/100/100?random= + '{{case.id}} + 55'" />
+        <img src="https://picsum.photos/100/100?random= + '{{46 + case.pay}} + 55'" />
       </ion-avatar>
       <ion-label>
         <h1>
-          {{case.userName}}
+          {{case.title}}
           <ion-icon *ngIf="case.collect === true" (click)="collectchange(case)" style="float: right; color: #F4ACB7;" name="heart" ></ion-icon><br>
           <ion-icon *ngIf="case.collect === false" (click)="collectchange(case)" style="float: right; color: #F4ACB7;" name="heart-outline"></ion-icon><br>
           <ion-badge slot="start">{{case.hashtag}}</ion-badge>
         </h1>
         <p style="float: left;"> <img style="height: 20px; width: 20px; margin-right: 5px;" src="../../assets/img/B_adobespark.png" />{{case.pay}}
         </p>
-        <!-- <p style="float:right; font-size: 15px;">{{case.date}}</p> -->
+        <p style="float:right; font-size: 15px;">{{case.date}}</p>
       </ion-label>
     </ion-item>
     <!-- </a> -->

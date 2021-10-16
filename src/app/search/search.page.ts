@@ -1,3 +1,4 @@
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { CaseService } from './../service/case.service';
 import { viewClassName } from '@angular/compiler';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -7,7 +8,8 @@ import { Moment } from 'moment';
 import { SearchCase } from '../models/searchcase.model';
 import * as moment from 'moment';
 // import { FirebaseDatabase, FirebaseFirestore } from 'angularfire2';
-
+// import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -21,22 +23,25 @@ export class SearchPage implements OnInit {
   // public list: Array<Object> = [];
   // public searcheditem: any;
   searchTerm: string;
-  cases: SearchCase[] = [];
+  //cases: SearchCase[] = [];
   collect: boolean = false;
   date: Date = new Date('2021-09-10 00:15:37');
-
-
+  items: Observable<any[]>;
+  cases: Observable<any[]>;
+  i: number = 26;
   constructor(
     private caseService: CaseService,
     private navCtrl: NavController,
-    //private store: FirebaseFirestore
-  ) { }
-
-  ngOnInit() {
-    this.cases = this.caseService.getCases();
+    private firestore: AngularFirestore
+  ) {
+    this.cases = firestore.collection('case').valueChanges();
   }
 
-  showDetail(selectedCase: SearchCase){
+  ngOnInit() {
+    //this.cases = this.caseService.getCases();
+  }
+
+  showDetail(selectedCase){
     this.navCtrl.navigateForward('search/detail/'+selectedCase.id)
   }
   // ionViewDidEnter(){

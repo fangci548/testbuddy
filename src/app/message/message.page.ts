@@ -1,10 +1,11 @@
 import { Case } from 'src/app/models/case.model';
 import { MessageModalComponent } from './message-modal/message-modal.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, NgIterable, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalController, NavController } from '@ionic/angular';
 import { MycaseService } from '../service/mycase.service';
-
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-message',
   templateUrl: './message.page.html',
@@ -13,13 +14,17 @@ import { MycaseService } from '../service/mycase.service';
 export class MessagePage implements OnInit {
 
   case?: Case;
+  items: Observable<any[]>;
 
   constructor(
     private route: ActivatedRoute,
     public nav: NavController,
     private caseService: MycaseService,
-    private modalCtrl: ModalController
-    ) { }
+    private modalCtrl: ModalController,
+    private firedatabase: AngularFireDatabase
+    ) {
+    this.items = firedatabase.list('firstchat').valueChanges();
+    }
 
   ngOnInit() {
     const caseId = Number(this.route.snapshot.params.id);
