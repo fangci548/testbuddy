@@ -22,8 +22,9 @@ export class MessagePage implements OnInit {
     public nav: NavController,
     private caseService: MycaseService,
     private modalCtrl: ModalController,
-    // private firedatabase: AngularFireDatabase
+    private firedatabase: AngularFireDatabase
     ) {
+      console.log(firedatabase.list('firstchat').valueChanges())
     //this.items = firedatabase.list('firstchat').valueChanges();
     }
 
